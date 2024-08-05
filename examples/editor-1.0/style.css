@@ -1,0 +1,56 @@
+html body {
+  font-family: 'Microsoft Tai Le';
+  font-size: .9rem;
+}
+
+/* Style editor */
+.editors-styles {
+  padding: 1rem 1rem 0;
+  width: 100%;
+  height: auto;
+  border: .1rem solid #dedede;
+  border-radius: .3rem;
+  background-color: #f6f6f6;
+}
+
+/* Dropdown */
+.dropdown {
+  padding: .4rem .4rem .4rem;
+  width: 100%;
+  border: .1rem solid #dedede;
+  border-radius: .2rem;
+  font-size: 1rem;
+  color: #515054;
+}
+
+
+/*Color pickcer styles*/
+.color-picker-wrapper-styles {
+  width: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-cell-style {
+  width: 2rem;
+  height:2rem;
+  border: .1rem solid #ffffff;
+}
+
+.color-cell-style:hover {
+  border: .2rem solid #f6f6f6;
+  transition: .2s;
+}
+
+.text-color-picker-showing {
+  display: none;
+}
+
+/* Create table */
+.input-row-styles {
+  padding: 1rem;
+}
+
+.selection-of-the-table-styles {
+  display: none;
+}

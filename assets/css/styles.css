@@ -1,0 +1,81 @@
+html body {
+  background: #e6e7ee;
+}
+
+.bg-dark {
+  background: #404a55;
+}
+
+.bg-deep-dark {
+  background: 0F1115;
+}
+
+.bg-night-dark {
+  background: #0e1014;
+}
+
+.bg-gradient-dark {
+  background: linear-gradient(#404a55, #0e1014);
+}
+
+.bg-warning {
+  background: #f9c000;
+}
+
+.right-angle {
+  border-radius: 0;
+}
+
+.color-dark {
+  color: #404a55;
+}
+
+.nav-link-style {
+}
+.nav-link-style.a:hover {
+  border-bottom: 0.1rem solid #404a55;
+}
+
+.type-square {
+  list-style-type: square;
+}
+
+/*Text size*/
+.text-size-1 {
+  font-size: 1.1rem;
+}
+
+.text-size-2 {
+  font-size: 1.2rem;
+}
+
+.text-size-3 {
+  font-size: 1.3rem;
+}
+
+.text-size-4 {
+  font-size: 1.4rem;
+}
+
+.text-size-5 {
+  font-size: 1.5rem;
+}
+/*End text size*/
+
+/*Borders*/
+.border-top-1 {
+  border-top: 0.1rem solid #c9cad0;
+}
+
+.border-left-1 {
+  border-left: 0.1rem solid #c9cad0;
+}
+
+.border-right-1 {
+  border-right: 0.1rem solid #c9cad0;
+}
+
+.border-bottom-1 {
+  border-bottom: 0.1rem solid #c9cad0;
+}
+/*End of borders*/

@@ -1,0 +1,83 @@
+html body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+.text-styles-container {
+  padding: 1rem 1rem 0;
+  background-color: #455a64;
+}
+
+.text-viewer-styles {
+  padding: 1rem 1rem 0;
+  border: .1rem solid rgba(0, 0, 0, .15);
+  box-shadow: -.1rem .1rem .8rem .3rem rgba(0, 0, 0, .2);
+}
+
+/* Text style toggle */
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-strikethrough {
+  text-decoration: line-through;
+}
+
+/* Buttons Styles */
+.style-control-buttons {
+  border: .1rem solid #EFEFEF;
+  background: #EFEFEF;
+  color: black;
+}
+
+.style-control-buttons:hover {
+  border: .1rem solid #455a64;
+  background: #EFEFEF;
+  color: #455a64;
+}
+
+/* Color Picker Styles */
+.cells-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.color-picker-cell {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+
+.br-0-3 {
+  border-radius: .3rem;
+}
+
+/* Background Images Cells Styles */
+.bacground-image.cell {
+  width: 10rem;
+  height: 3rem;
+}
+
+/* Table styles */
+.trasparent-button,
+.trasparent-button:hover,
+.trasparent-button:link,
+.trasparent-button:visited,
+.trasparent-button:active {
+  background: transparent;
+  color: black;
+}
