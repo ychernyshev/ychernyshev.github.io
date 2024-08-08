@@ -1,13 +1,3 @@
-function spanWarning(text){
-    spanElement.className = 'text-warning';
-    spanElement.innerText = text;
-}
-
-function spanSuccess(text) {
-    spanElement.className = 'text-success';
-    spanElement.innerText = text;
-}
-
 function RightSideSkillsElementsTable() {
     
 }
@@ -50,7 +40,7 @@ const spanElement = document.createElement('span');
 const rightSideSubtitle = document.createElement('h3');
 rightSideSubtitle.id = 'my-name';
 rightSideSubtitle.className = 'text-justify';
-rightSideSubtitle.innerHTML = `Hi. My name is ${spanWarning('Eugene')} or ${spanSuccess('Yevhenii')}, as you like`;
+rightSideSubtitle.innerHTML = `Hi. My name is <span class="text-warning">Eugene</span> or <span class="text-success">Yevhenii</span>, as you like`;
 
 
 const rightSideDescription = document.createElement('p');
@@ -64,8 +54,6 @@ rightSideSkillsListMain.className = 'col-xl-12 col-lg-10 col-sm-11 text-justify'
 
 const rightSideSkillsElementCell = document.createElement('div');
 rightSideSkillsElementCell.className = 'row mt-4 mb-4 list-spacing list-font-size mx-auto';
-
-
 
 
 document.getElementById('App').appendChild(intro);
