@@ -1,5 +1,10 @@
-function RightSideSkillsElementsTable() {
+function SkillsElementsTable(skill) {
+    const rightSideSkillsElementCell = document.createElement('div');
+    rightSideSkillsElementCell.className = 'col-xl-3 col-lg-3 col-sm-6 col-12 d-flex align-items-center text-center bg-dark p-3';
+    rightSideSkillsElementCell.innerHTML = skill.name;
     
+    rightSideSkillsElementCellRow.appendChild(rightSideSkillsElementCell);
+    containerRightSide.appendChild(rightSideSkillsElementCellRow);
 }
 
 const intro = document.createElement('div');
@@ -52,8 +57,8 @@ const rightSideSkillsListMain = document.createElement('div');
 rightSideSkillsListMain.className = 'col-xl-12 col-lg-10 col-sm-11 text-justify';
 
 
-const rightSideSkillsElementCell = document.createElement('div');
-rightSideSkillsElementCell.className = 'row mt-4 mb-4 list-spacing list-font-size mx-auto';
+const rightSideSkillsElementCellRow = document.createElement('div');
+rightSideSkillsElementCellRow.className = 'row mt-4 mb-4 list-spacing list-font-size mx-auto';
 
 
 document.getElementById('App').appendChild(intro);
@@ -67,3 +72,9 @@ containerRow.appendChild(containerRightSide);
 containerRightSide.appendChild(rightSideTitle);
 containerRightSide.appendChild(rightSideSubtitle);
 containerRightSide.appendChild(rightSideDescription);
+
+skillsList.forEach(skill => {
+    SkillsElementsTable(skill);
+}); 
+
+
