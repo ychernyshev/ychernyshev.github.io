@@ -1,10 +1,16 @@
 function SkillsElementsTable(skill) {
     const rightSideSkillsElementCell = document.createElement('div');
-    rightSideSkillsElementCell.className = 'col-xl-3 col-lg-3 col-sm-6 col-12 d-flex align-items-center text-center bg-dark p-3';
+    rightSideSkillsElementCell.className = 'col-xl-3 col-lg-3 col-sm-6 col-xs-6 bg-dark p-3';
+    rightSideSkillsElementCell.style.textAlign = 'center';
     rightSideSkillsElementCell.innerHTML = skill.name;
     
-    rightSideSkillsElementCellRow.appendChild(rightSideSkillsElementCell);
+    //const rightSideSkillsElementCellContent = document.createElement('span');
+    //rightSideSkillsElementCellContent.style.textAlign = 'center';
+    //rightSideSkillsElementCellContent.innerHTML = skill.name;
+    
     containerRightSide.appendChild(rightSideSkillsElementCellRow);
+    rightSideSkillsElementCellRow.appendChild(rightSideSkillsElementCell);
+    //rightSideSkillsElementCell.appendChild(rightSideSkillsElementCellContent);
 }
 
 const intro = document.createElement('div');
@@ -21,7 +27,7 @@ containerRow.style.position = 'relative';
 
 
 const containerLeftSide = document.createElement('div');
-containerLeftSide.className = 'col-xl-3 col-lg-8 col-sm-11';
+containerLeftSide.className = 'col-xl-3 col-lg-8 col-sm-11 d-flex justify-content-center';
 
 
 const containerRightSide = document.createElement('div');
@@ -31,7 +37,7 @@ containerRightSide.className = 'col-xl-7 col-lg-8 col-sm-11 text-justify';
 //Left side content
 const authorImage = document.createElement('img');
 authorImage.setAttribute('src', 'assets/images/persona.jpg');
-authorImage.setAttribute('width', '100%');
+authorImage.setAttribute('width', '80%');
 
 
 //Right side content
@@ -58,7 +64,7 @@ rightSideSkillsListMain.className = 'col-xl-12 col-lg-10 col-sm-11 text-justify'
 
 
 const rightSideSkillsElementCellRow = document.createElement('div');
-rightSideSkillsElementCellRow.className = 'row mt-4 mb-4 list-spacing list-font-size mx-auto';
+rightSideSkillsElementCellRow.className = 'row mt-5 mb-4 list-spacing list-font-size mx-auto';
 
 
 document.getElementById('App').appendChild(intro);
