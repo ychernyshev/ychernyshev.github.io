@@ -14,17 +14,17 @@ const mainContainerInnerRow = document.createElement('div');
 mainContainerInnerRow.className = 'row justify-content-center';
 
 
-const theLeftSide = document.createElement('div');
-theLeftSide.className = 'col-xl-3';
+const theLeftSideOfTheMainContainer = document.createElement('div');
+theLeftSideOfTheMainContainer.className = 'col-xl-3';
 
 
-const theRightSide = document.createElement('div');
-theRightSide.className = 'col-xl-7';
+const theRightSideOfTheMainContainer = document.createElement('div');
+theRightSideOfTheMainContainer.className = 'col-xl-7';
 
 
 document.getElementById('App').appendChild(mainContent);
 mainContent.appendChild(mainContentRow);
 mainContentRow.appendChild(mainContainerInnerGlobalColLayer);
 mainContainerInnerGlobalColLayer.appendChild(mainContainerInnerRow);
-mainContainerInnerRow.appendChild(theLeftSide);
-mainContainerInnerRow.appendChild(theRightSide);
+mainContainerInnerRow.appendChild(theLeftSideOfTheMainContainer);
+mainContainerInnerRow.appendChild(theRightSideOfTheMainContainer);
