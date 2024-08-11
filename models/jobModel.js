@@ -14,8 +14,8 @@ const jobList = [
                                     warehouse for further processing;
                                 </li>
                             </ul>`,
-        'examplePreviewUrl': '', 
-        'exampleCodeUrl': '', 
+        'examplePreviewUrl': '#',
+        'exampleCodeUrl': '#',
         'experience': 'This job pushed me to learn Vue.js',
     },
     {
@@ -44,8 +44,8 @@ const jobList = [
                                     Work with the database.
                                 </li>
                             </ul>`,
-        'examplePreviewUrl': '', 
-        'exampleCodeUrl': '', 
+        'examplePreviewUrl': '',
+        'exampleCodeUrl': '',
         'experience': 'This job pushed me to learn Django',
     },
     {
@@ -68,8 +68,8 @@ const jobList = [
                                     centre operations.
                                 </li>
                             </ul>`,
-        'examplePreviewUrl': '', 
-        'exampleCodeUrl': '', 
+        'examplePreviewUrl': '',
+        'exampleCodeUrl': '',
         'experience': 'Simple pages in HTML and CSS for collecting work information to be comfortable using',
     },
     {
@@ -99,8 +99,8 @@ const jobList = [
                                     organization's digital assets.
                                 </li>
                             </ul>`,
-        'examplePreviewUrl': '', 
-        'exampleCodeUrl': '', 
+        'examplePreviewUrl': '#',
+        'exampleCodeUrl': '#',
         'experience': 'The project in the code base was rewritten from scratch for Vue.js',
     },
 ] 

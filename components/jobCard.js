@@ -39,6 +39,7 @@ function jobCard(item) {
     jobExampleBody.innerText = 'Example from my job: ';
 
 
+
     const examplePreviewLink = document.createElement('a');
     examplePreviewLink.setAttribute('href', '');
     examplePreviewLink.className = 'btn btn-warning right-angle';
@@ -74,9 +75,11 @@ function jobCard(item) {
     cardBodyRow.appendChild(cardBodyRowRight);
     cardBodyRowRight.appendChild(jobDescription);
     cardBodyRowRight.appendChild(jobResponsibilities);
-    cardBodyRowRight.appendChild(jobExampleBody);
-    jobExampleBody.appendChild(examplePreviewLink);
-    jobExampleBody.appendChild(exampleCodeLink);
+    if(item.exampleCodeUrl.length >= 1 && item.examplePreviewUrl.length >= 1) {
+        cardBodyRowRight.appendChild(jobExampleBody);
+        jobExampleBody.appendChild(examplePreviewLink);
+        jobExampleBody.appendChild(exampleCodeLink);
+    }
     cardBodyRowRight.appendChild(jobExperience);
     jobExperience.appendChild(jobExperienceDescription);
 }
