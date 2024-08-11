@@ -1,4 +1,4 @@
-const example = [
+const examplesList = [
     {
         'name': '',
         'url': '',
@@ -9,4 +9,4 @@ const example = [
         'url': '',
         'technology': '',
     },
-] 
+];
