@@ -10,7 +10,7 @@ function LeftNavElementsListConstruction(element) {
     itemLink = document.createElement('a');
     itemLink.className = 'nav-link color-dark nav-link-style active';
     itemLink.setAttribute('href', element.url);
-    itemLink.innerHTML = element.name;
+    itemLink.innerText = element.name;
 
 
     LeftElentLi.appendChild(itemLink);
@@ -31,7 +31,7 @@ function RightNavElementsListConstruction(element) {
     itemLink = document.createElement('a');
     itemLink.className = 'nav-link color-dark nav-link-style active';
     itemLink.setAttribute('href', element.url);
-    itemLink.innerHTML = element.name;
+    itemLink.innerText = element.name;
 
 
     RightElentLi.appendChild(itemLink);
@@ -66,7 +66,7 @@ topNavElements.id = 'navbarSupportedContent';
 authorName = document.createElement('h2');
 authorName.className = 'mx-auto persona-font-size text-center';
 authorName.id = 'YC';
-authorName.innerHTML = 'Yevhenii Chernyshev';
+authorName.innerText = 'Yevhenii Chernyshev';
 
 
 navLeftElementsList.forEach(element => {

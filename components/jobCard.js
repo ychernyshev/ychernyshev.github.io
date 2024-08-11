@@ -36,7 +36,7 @@ function jobCard(item) {
 
     const jobExampleBody = document.createElement('p');
     jobExampleBody.className = 'mt-3';
-    jobExampleBody.innerText = 'Example from my job:';
+    jobExampleBody.innerText = 'Example from my job: ';
 
 
     const examplePreviewLink = document.createElement('a');
@@ -75,8 +75,8 @@ function jobCard(item) {
     cardBodyRowRight.appendChild(jobDescription);
     cardBodyRowRight.appendChild(jobResponsibilities);
     cardBodyRowRight.appendChild(jobExampleBody);
-    cardBodyRowRight.appendChild(examplePreviewLink);
-    cardBodyRowRight.appendChild(exampleCodeLink);
+    jobExampleBody.appendChild(examplePreviewLink);
+    jobExampleBody.appendChild(exampleCodeLink);
     cardBodyRowRight.appendChild(jobExperience);
     jobExperience.appendChild(jobExperienceDescription);
 }
