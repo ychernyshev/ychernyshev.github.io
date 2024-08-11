@@ -42,7 +42,7 @@ authorImage.setAttribute('width', '80%');
 
 //Right side content
 const rightSideTitle = document.createElement('h1');
-rightSideTitle.innerHTML = 'Welcome to my personal page';
+rightSideTitle.innerText = 'Welcome to my personal page';
 
 
 const spanElement = document.createElement('span');
