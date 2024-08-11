@@ -31,8 +31,8 @@ function ExampleXardShower(item) {
 
     const exampleItem = document.createElement('img');
     exampleItem.className = 'card-img-top';
-    exampleItem.setAttribute('src', '');
-    exampleItem.setAttribute('alt', '');
+    exampleItem.setAttribute('src', item.url);
+    exampleItem.setAttribute('alt', item.name);
 
 
     theLeftSideOfTheMainContainer.appendChild(exampleCardFirstLayer);
