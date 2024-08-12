@@ -38,7 +38,7 @@ resumeDownloadLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="3
 
 
 const resumeDownloadTitleBody = document.createElement('div')
-resumeDownloadTitleBody.className = 'col-lg-9 col-sm-7 my-auto p-2';
+resumeDownloadTitleBody.className = 'col-lg-9 col-sm-8 my-auto p-2';
 resumeDownloadTitleBody.style.background = '#212529';
 
 

@@ -1,7 +1,3 @@
-const mainContent = document.createElement('div');
-mainContent.className = 'container-fluid';
-
-
 const mainContentRow = document.createElement('div');
 mainContentRow.className = 'row justify-content-center';
 
@@ -22,8 +18,7 @@ const theRightSideOfTheMainContainer = document.createElement('div');
 theRightSideOfTheMainContainer.className = 'col-xl-7';
 
 
-document.getElementById('App').appendChild(mainContent);
-mainContent.appendChild(mainContentRow);
+document.getElementById('App').appendChild(mainContentRow);
 mainContentRow.appendChild(mainContainerInnerGlobalColLayer);
 mainContainerInnerGlobalColLayer.appendChild(mainContainerInnerRow);
 mainContainerInnerRow.appendChild(theLeftSideOfTheMainContainer);
