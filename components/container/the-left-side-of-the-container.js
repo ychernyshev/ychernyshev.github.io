@@ -5,8 +5,9 @@ numberOfExamplesContainer.className = 'col-5 d-flex flex-row';
 const numberOfExample = document.createElement('p');
 numberOfExample.style.marginTop = '-12rem';
 numberOfExample.style.marginBottom = '-15rem';
-numberOfExample.style.fontSize = '30rem';
+numberOfExample.style.fontSize = '25rem';
 numberOfExample.innerText = '4';
+
 
 
 const numberOfExamplesName = document.createElement('p');

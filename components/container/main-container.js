@@ -14,6 +14,10 @@ const theLeftSideOfTheMainContainer = document.createElement('div');
 theLeftSideOfTheMainContainer.className = 'col-xl-2';
 
 
+const theMainContainerCentral = document.createElement('div');
+theLeftSideOfTheMainContainer.className = 'col-xl-2';
+
+
 const theRightSideOfTheMainContainer = document.createElement('div');
 theRightSideOfTheMainContainer.className = 'col-xl-8';
 
@@ -26,5 +30,6 @@ document.getElementById('App').appendChild(mainContentRow);
 mainContentRow.appendChild(mainContainerInnerGlobalColLayer);
 mainContainerInnerGlobalColLayer.appendChild(mainContainerInnerRow);
 mainContainerInnerRow.appendChild(theRightSideOfTheMainContainer);
+//mainContainerInnerRow.appendChild(theMainContainerCentral);
 mainContainerInnerRow.appendChild(theLeftSideOfTheMainContainer);
 mainContainerInnerRow.appendChild(theEmptyContainer);
