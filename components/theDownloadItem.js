@@ -1,5 +1,6 @@
 const theDownloadBodyContainerRow = document.createElement('div');
 theDownloadBodyContainerRow.className = 'row';
+theDownloadBodyContainerRow.style.marginTop = '-2rem';
 
 
 const theDownloadBodyContainerEmpty = document.createElement('div');
@@ -7,7 +8,7 @@ theDownloadBodyContainerEmpty.className = 'col-lg-4';
 
 
 const theDownloadSection = document.createElement('div');
-theDownloadSection.className = 'col-lg-8';
+theDownloadSection.className = 'col-lg-8 bg-warning';
 
 
 //const resumeDownloadBody = document.createElement('div');
@@ -40,8 +41,9 @@ resumeDownloadTitleBodyRow.className = 'row';
 
 
 
-//const resumeDownloadTitleBodyEmpty = document.createElement('div');
-//resumeDownloadTitleBodyEmpty.className = 'col-lg-4';
+const resumeDownloadTitleBodyEmpty = document.createElement('div');
+resumeDownloadTitleBodyEmpty.className = 'col-lg-2';
+resumeDownloadTitleBodyEmpty.style.background = '#212529';
 
 
 const resumeDownloadTitleBody = document.createElement('div');
@@ -64,6 +66,9 @@ theDownloadBodyContainerRow.appendChild(theDownloadSection);
 theDownloadSection.appendChild(resumeDownloadTitleBodyRow);
 resumeDownloadTitleBodyRow.appendChild(resumeDownloadDownload);
 resumeDownloadDownload.appendChild(resumeDownloadLink);
+resumeDownloadTitleBodyRow.appendChild(resumeDownloadTitleBody);
+resumeDownloadTitleBodyRow.appendChild(resumeDownloadTitleBodyEmpty);
+
 //theMainContainerCentral.appendChild(resumeDownloadTitleBodyRow);
 //resumeDownloadTitleBodyRow.appendChild(resumeDownloadTitleBodyEmpty);
 //resumeDownloadTitleBodyRow.appendChild(resumeDownloadBody);

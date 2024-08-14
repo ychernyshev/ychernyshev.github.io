@@ -1,5 +1,5 @@
 const cardBody = document.createElement('div');
-cardBody.className = 'col-12 text-light';
+//cardBody.className = 'col-12 text-light';
 
 
 //const resumeDownloadEmptyLeft = document.createElement('div');
@@ -12,7 +12,7 @@ cardBody.className = 'col-12 text-light';
 //resumeDownloadEmptyRight.style.background = '#0F1115';
 
 
-//theRightSideOfTheMainContainer.appendChild(resumeDownloadBody);
+theRightSideOfTheMainContainer.appendChild(theDownloadBodyContainerRow);
 theRightSideOfTheMainContainer.appendChild(cardBody);
 
 jobList.forEach(item => {

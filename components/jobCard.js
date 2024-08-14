@@ -23,7 +23,7 @@ function jobCard(item) {
 
 
     const cardBodyRowRight = document.createElement('div');
-    cardBodyRowRight.className = 'col-lg-8 col-sm-12 bg-dark text-justify p-4 regular-text';
+    cardBodyRowRight.className = 'col-lg-8 col-sm-12 bg-dark text-justify p-4 regular-text text-light';
 
 
     const jobDescription = document.createElement('p');
@@ -59,7 +59,7 @@ function jobCard(item) {
     const jobExperience = document.createElement('p');
 
 
-    const jobExperienceDescription = document.createElement('span')
+    const jobExperienceDescription = document.createElement('span');
     jobExperienceDescription.className = 'bg-light text-secondary p-1 font-weight-bold';
     jobExperienceDescription.innerText = item.experience;
 
