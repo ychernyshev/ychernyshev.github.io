@@ -4,11 +4,11 @@ theDownloadBodyContainerRow.style.marginTop = '-2rem';
 
 
 const theDownloadBodyContainerEmpty = document.createElement('div');
-theDownloadBodyContainerEmpty.className = 'col-lg-4';
+theDownloadBodyContainerEmpty.className = 'col-lg-1 bg-dark';
 
 
 const theDownloadSection = document.createElement('div');
-theDownloadSection.className = 'col-lg-8 bg-warning';
+theDownloadSection.className = 'col-lg-11 bg-warning';
 
 
 const resumeDownloadDownload = document.createElement('div');
