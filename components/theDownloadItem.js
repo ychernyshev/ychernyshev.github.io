@@ -11,18 +11,8 @@ const theDownloadSection = document.createElement('div');
 theDownloadSection.className = 'col-lg-8 bg-warning';
 
 
-//const resumeDownloadBody = document.createElement('div');
-//resumeDownloadBody.className = 'card col-lg-8 col-sm-12 right-angle border-0';
-//resumeDownloadBody.style.marginTop = '-2rem';
-//resumeDownloadBody.style.background = '#f3f3f3';
-
-
-//const resumeDownloadRow = document.createElement('div');
-//resumeDownloadRow.className = 'row h-100 bg-warning';
-
-
 const resumeDownloadDownload = document.createElement('div');
-resumeDownloadDownload.className = 'col-lg-2 col-sm-2 text-center my-auto';
+resumeDownloadDownload.className = 'col-lg-1 col-sm-2 text-center my-auto';
 
 
 const resumeDownloadLink = document.createElement('a');
@@ -42,12 +32,12 @@ resumeDownloadTitleBodyRow.className = 'row';
 
 
 const resumeDownloadTitleBodyEmpty = document.createElement('div');
-resumeDownloadTitleBodyEmpty.className = 'col-lg-2';
+resumeDownloadTitleBodyEmpty.className = 'col-lg-1';
 resumeDownloadTitleBodyEmpty.style.background = '#212529';
 
 
 const resumeDownloadTitleBody = document.createElement('div');
-resumeDownloadTitleBody.className = 'col-lg-8 col-sm-9 my-auto p-2';
+resumeDownloadTitleBody.className = 'col-lg-10 col-sm-9 my-auto p-2';
 resumeDownloadTitleBody.style.background = '#212529';
 
 
@@ -68,17 +58,5 @@ resumeDownloadTitleBodyRow.appendChild(resumeDownloadDownload);
 resumeDownloadDownload.appendChild(resumeDownloadLink);
 resumeDownloadTitleBodyRow.appendChild(resumeDownloadTitleBody);
 resumeDownloadTitleBodyRow.appendChild(resumeDownloadTitleBodyEmpty);
-
-//theMainContainerCentral.appendChild(resumeDownloadTitleBodyRow);
-//resumeDownloadTitleBodyRow.appendChild(resumeDownloadTitleBodyEmpty);
-//resumeDownloadTitleBodyRow.appendChild(resumeDownloadBody);
-//resumeDownloadBody.appendChild(resumeDownloadRow);
-//resumeDownloadRow.appendChild(resumeDownloadEmptyLeft);
-
-//resumeDownloadRow.appendChild(resumeDownloadDownload);
-
-//resumeDownloadRow.appendChild(resumeDownloadTitleBody);
 resumeDownloadTitleBody.appendChild(resumeTitleWrapper);
 resumeTitleWrapper.appendChild(resumeTitleText);
-
-//resumeDownloadRow.appendChild(resumeDownloadEmptyRight);
