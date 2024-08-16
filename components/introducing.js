@@ -69,6 +69,7 @@ rightSideSkillsElementCellRow.className = 'row mt-5 mb-4 list-spacing list-font-
 
 document.getElementById('App').appendChild(intro);
 intro.appendChild(introContainer);
+//intro.appendChild(contactsButtonItem);
 introContainer.appendChild(containerRow);
 
 containerRow.appendChild(containerLeftSide);

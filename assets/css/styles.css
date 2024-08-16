@@ -79,3 +79,7 @@ html body {
   border-bottom: 0.1rem solid #c9cad0;
 }
 /*End of borders*/
+
+.rotate-90 {
+     transform: rotate(-90deg);
+}

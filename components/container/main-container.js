@@ -28,6 +28,7 @@ theRightSideOfTheMainContainer.className = 'col-xl-7';
 
 document.getElementById('App').appendChild(mainContantContainer);
 mainContantContainer.appendChild(mainContentRow);
+mainContantContainer.appendChild(contactsButtonItem);
 //mainContentRow.appendChild(mainContainerInnerGlobalColLayer);
 //mainContainerInnerGlobalColLayer.appendChild(mainContainerInnerRow);
 //mainContainerInnerRow.appendChild(theLeftSideOfTheMainContainer);
