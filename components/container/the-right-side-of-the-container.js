@@ -13,3 +13,9 @@ theRightSideOfTheMainContainer.appendChild(cardBody);
 jobList.forEach(item => {
     jobCard(item);
 });
+
+theRightSideOfTheMainContainer.appendChild(educationShowButtonContainerRow);
+
+educationDiplomasList.forEach(item => {
+    EducationDescription(item);
+})

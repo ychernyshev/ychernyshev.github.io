@@ -1,4 +1,4 @@
-const educationList = [
+const educationDiplomasList = [
     {
         'name': 'National Aviation University',
         'date': '2011-2016',
@@ -6,6 +6,10 @@ const educationList = [
         'description': '',
         'diploma': '',
     },
+];
+
+
+const educationCertificatesList = [
     {
         'name': 'Logos IT Academy',
         'date': '2022',
@@ -24,8 +28,7 @@ const educationList = [
         'name': 'Quality Assurance Group',
         'date': '2013',
         'title': 'QA Engineer',
-        'description': '',
-        'diploma': `<ul class="list-group list">
+        'description': `<ul class="list-group list">
                         The following knowledge was gained from this course:
                         <li class="list-group-item bg-transparent">
                             SDLC understanding;
@@ -55,5 +58,6 @@ const educationList = [
                             Issue Tracking.
                         </li>
                     </ul>`,
+        'diploma': '',
     },
-]
+];
