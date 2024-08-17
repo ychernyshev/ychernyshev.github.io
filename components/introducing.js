@@ -42,7 +42,7 @@ authorImage.setAttribute('width', '80%');
 
 //Right side content
 const rightSideTitle = document.createElement('h1');
-rightSideTitle.innerText = 'Welcome to my personal page';
+rightSideTitle.innerText = 'Welcome to my interactive resume';
 
 
 const spanElement = document.createElement('span');
