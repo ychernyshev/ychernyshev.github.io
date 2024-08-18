@@ -13,7 +13,7 @@ function AdditionalSkillItemView(item) {
 
 
 const additionalSkillsContainer = document.createElement('div');
-additionalSkillsContainer.className = 'col-10 bg-dark text-light mt-3 p-3';
+additionalSkillsContainer.className = 'col-xl-10 col-sm-12 bg-dark text-light mt-3 p-3';
 
 
 const additionalSkillsTitle = document.createElement('h5');
