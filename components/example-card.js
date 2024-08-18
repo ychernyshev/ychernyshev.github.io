@@ -5,17 +5,17 @@ function ExampleXardShower(item) {
 
 
     const exampleCardSecondLayer = document.createElement('div');
-    exampleCardSecondLayer.className = 'mb-5';
+    // exampleCardSecondLayer.className = 'mb-1';
     exampleCardSecondLayer.style.background = '#212529'; 
-    exampleCardSecondLayer.style.width = '25rem';  
-    exampleCardSecondLayer.style.height = '16.5rem';   
+    exampleCardSecondLayer.style.width = '100%';
+    exampleCardSecondLayer.style.height = '16.7rem';
     exampleCardSecondLayer.style.position = 'relative';   
 
 
     const exampleGridRow = document.createElement('div');
     exampleGridRow.className = 'row';
     exampleGridRow.style.position = 'absolute'; 
-    exampleGridRow.style.top = '-2rem'; 
+    exampleGridRow.style.top = '-2rem';
     exampleGridRow.style.left = '2rem'; 
 
 
@@ -25,8 +25,8 @@ function ExampleXardShower(item) {
 
     const exampleItemLayer = document.createElement('div');
     exampleItemLayer.className = 'card p-1';
-    exampleItemLayer.style.width = '25rem'; 
-    exampleItemLayer.style.height = '16.5rem'; 
+    exampleItemLayer.style.width = '100%';
+    exampleItemLayer.style.height = '100%';
 
 
     const exampleItem = document.createElement('img');

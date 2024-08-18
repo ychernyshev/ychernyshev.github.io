@@ -1,18 +1,19 @@
 const numberOfExamplesContainer = document.createElement('div');
-numberOfExamplesContainer.className = 'col-5 d-flex flex-row';
+numberOfExamplesContainer.className = 'd-flex flex-row';
+numberOfExamplesContainer.style.marginLeft = '8rem';
 
 
-const numberOfExample = document.createElement('p');
-numberOfExample.style.marginTop = '-12rem';
-numberOfExample.style.marginBottom = '-15rem';
-numberOfExample.style.fontSize = '25rem';
-numberOfExample.innerText = '4';
-
+const numberOfExamples = document.createElement('p');
+numberOfExamples.className = 'roboto-condensed-bold';
+numberOfExamples.style.marginTop = '-12rem';
+numberOfExamples.style.marginBottom = '-15rem';
+numberOfExamples.style.fontSize = '30rem';
+numberOfExamples.innerText = '4';
 
 
 const numberOfExamplesName = document.createElement('p');
-numberOfExamplesName.className = 'mt-4';
 numberOfExamplesName.style.transform = 'rotate(-90deg)';
+numberOfExamplesName.style.marginTop = '-.6rem';
 numberOfExamplesName.style.marginBottom = '1rem';
 numberOfExamplesName.style.fontSize = '2.25rem';
 numberOfExamplesName.style.letterSpacing = '.7rem';
@@ -20,7 +21,7 @@ numberOfExamplesName.innerText = 'EXAMPLES';
 
 
 theLeftSideOfTheMainContainer.appendChild(numberOfExamplesContainer);
-numberOfExamplesContainer.appendChild(numberOfExample);
+numberOfExamplesContainer.appendChild(numberOfExamples);
 numberOfExamplesContainer.appendChild(numberOfExamplesName);
 
 

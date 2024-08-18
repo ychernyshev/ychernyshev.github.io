@@ -2,12 +2,19 @@ html body {
   background: #e6e7ee;
 }
 
+.roboto-condensed-bold {
+  font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
 .bg-dark {
   background: #404a55;
 }
 
 .bg-deep-dark {
-  background: 0F1115;
+  background: #0F1115;
 }
 
 .bg-night-dark {
