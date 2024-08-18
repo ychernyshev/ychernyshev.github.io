@@ -15,14 +15,24 @@ const educationCertificatesList = [
         'date': '2022',
         'title': 'JavaScript Essentials',
         'description': '',
-        'diploma': '',
+        'project': '#',
+        'certificate': 'https://drive.google.com/file/d/1YZLmYc0XT_39zNbFrq_30J-vOCizBH52/view?usp=drive_link',
     },
     {
         'name': 'Logos IT Academy',
         'date': '2021',
         'title': 'English Intermediate',
         'description': '',
-        'diploma': '',
+        'project': '',
+        'certificate': 'https://drive.google.com/file/d/1v6FALpBSkLwfTaTEAl5UwOzeb8ME6QTg/view?usp=drive_link',
+    },
+    {
+        'name': 'Logos IT Academy',
+        'date': '2020',
+        'title': 'English Low-Intermediate',
+        'description': '',
+        'project': '',
+        'certificate': 'https://drive.google.com/file/d/1uWyd066C8kwxR5TdsUkxJLxY5WhEmKJC/view?usp=drive_link',
     },
     {
         'name': 'Quality Assurance Group',
@@ -58,6 +68,7 @@ const educationCertificatesList = [
                             Issue Tracking.
                         </li>
                     </ul>`,
-        'diploma': '',
+        'project': '',
+        'certificate': 'https://drive.google.com/file/d/1OdtNKjTem-lloPHVgtOQRZamu-y-LY9w/view?usp=drive_link&quot;',
     },
 ];

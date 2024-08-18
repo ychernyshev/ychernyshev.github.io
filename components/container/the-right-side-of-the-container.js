@@ -17,5 +17,9 @@ jobList.forEach(item => {
 theRightSideOfTheMainContainer.appendChild(educationShowButtonContainerRow);
 
 educationDiplomasList.forEach(item => {
-    EducationDescription(item);
+    HigherEducationDescription(item);
+})
+
+educationCertificatesList.forEach(item => {
+    AdditionalEducationDescription(item);
 })
