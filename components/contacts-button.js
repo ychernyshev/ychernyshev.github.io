@@ -8,3 +8,6 @@ contactsButtonItem.style.right = '-3rem';
 contactsButtonItem.style.xIndex = '1000';  
 contactsButtonItem.id = 'contacts-modal';
 contactsButtonItem.innerText = 'CONTACTS';
+contactsButtonItem.setAttribute('onclick', 'ContactsWindowShowing()');
+contactsButtonItem.setAttribute('data-toggle', 'modal');
+contactsButtonItem.setAttribute('data-target', '#contactsWindow');
