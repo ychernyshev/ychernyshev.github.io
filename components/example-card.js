@@ -24,13 +24,13 @@ function ExampleXardShower(item) {
 
 
     const exampleItemLayer = document.createElement('div');
-    exampleItemLayer.className = 'card p-1';
+    exampleItemLayer.className = 'card p-1 right-angle';
     exampleItemLayer.style.width = '100%';
-    exampleItemLayer.style.height = '100%';
+    exampleItemLayer.style.height = '17.1rem';
 
 
     const exampleItem = document.createElement('img');
-    exampleItem.className = 'card-img-top';
+    exampleItem.className = 'card-img-top right-angle';
     exampleItem.setAttribute('src', item.url);
     exampleItem.setAttribute('alt', item.name);
 
