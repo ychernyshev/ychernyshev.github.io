@@ -20,18 +20,18 @@ function ContactsWindowShowing() {
     contactsWindowContainer.setAttribute('aria-hidden', 'true');
 
     const contactsWindowDialog = document.createElement('div');
-    contactsWindowDialog.className = 'modal-dialog';
+    contactsWindowDialog.className = 'modal-dialog modal-dialog-centered';
     
 
     const contactsWindowContent = document.createElement('div');
-    contactsWindowContent.className = 'modal-content';
+    contactsWindowContent.className = 'modal-content bg-dark text-light';
     
 
     const contactsWindowHeader = document.createElement('div');
     contactsWindowHeader.className = 'modal-header text-center';
 
 
-    const contactsWindowsTitle = document.createElement('h5');
+    const contactsWindowsTitle = document.createElement('h2');
     contactsWindowsTitle.className = 'modal-title mx-auto';
     contactsWindowsTitle.id = 'contactsWindowLabel';
     contactsWindowsTitle.innerText = 'Let\'s stay in touch';
@@ -41,24 +41,22 @@ function ContactsWindowShowing() {
     contactsWindowContentBody.className = 'modal-body';
     
     
-    const contactsWindowContentBodyEmailTitle = document.createElement('h2');
-    contactsWindowContentBodyEmailTitle.className = 'display-5';
-    contactsWindowContentBodyEmailTitle.innerText = 'Email:';
+    const contactsWindowContentBodyEmailTitle = document.createElement('h3');
+    contactsWindowContentBodyEmailTitle.innerText = 'Email: ';
     
     
     const contactsWindowContentBodyEmailLink = document.createElement('a');
     contactsWindowContentBodyEmailLink.setAttribute('href', 'mailto:eugene_chernyshev@yahoo.com');
-    contactsWindowContentBodyEmailLink.className = 'regular-text';
+    contactsWindowContentBodyEmailLink.className = 'text-size-5';
     contactsWindowContentBodyEmailLink.innerText = 'eugene_chernyshev@yahoo.com';
     
     
-    const contactsWindowContentBodyPhoneTitle = document.createElement('h2');
-    contactsWindowContentBodyPhoneTitle.className = 'display-5';
-    contactsWindowContentBodyPhoneTitle.innerText = 'Phones:';
+    const contactsWindowContentBodyPhoneTitle = document.createElement('h3');
+    contactsWindowContentBodyPhoneTitle.innerText = 'Phones: ';
     
     
     const phoneItemsLead = document.createElement('p');
-    phoneItemsLead.className = 'lead';
+    phoneItemsLead.className = 'lead text-size-5';
     
     
     phoneList.forEach(item => {
