@@ -46,7 +46,7 @@ resumeTitleWrapper.className = 'text-center text-light';
 
 
 const resumeTitleText = document.createElement('h4');
-resumeTitleText.className = 'title-text my-auto';
+resumeTitleText.className = 'my-auto display-5';
 resumeTitleText.innerText = 'Python/JavaScript Developer';
 
 

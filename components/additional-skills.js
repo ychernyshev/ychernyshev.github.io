@@ -17,7 +17,7 @@ additionalSkillsContainer.className = 'col-xl-10 col-sm-12 bg-dark text-light mt
 
 
 const additionalSkillsTitle = document.createElement('h5');
-additionalSkillsTitle.className = 'text-center title-text';
+additionalSkillsTitle.className = 'text-center display-4';
 additionalSkillsTitle.innerText = 'My additional skills';
 
 

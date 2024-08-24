@@ -8,17 +8,17 @@ function jobCard(item) {
 
 
     const jobTitle = document.createElement('h5');
-    jobTitle.className = 'text-uppercase title-text';
+    jobTitle.className = 'text-uppercase';
     jobTitle.innerText = item.name;
 
 
     const jobPossition = document.createElement('p');
-    jobPossition.className = 'regular-text';
+    // jobPossition.className = 'regular-text';
     jobPossition.innerText = item.position;
 
 
     const jobDate = document.createElement('p');
-    jobDate.className = 'regular-text';
+    // jobDate.className = 'regular-text';
     jobDate.innerText = item.date;
 
 
