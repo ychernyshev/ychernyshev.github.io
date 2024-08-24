@@ -17,17 +17,19 @@ additionalSkillsContainer.className = 'col-xl-10 col-sm-12 bg-dark text-light mt
 
 
 const additionalSkillsTitle = document.createElement('h5');
-additionalSkillsTitle.className = 'text-center display-4';
+additionalSkillsTitle.className = 'text-center regular-text font-weight-bold';
 additionalSkillsTitle.innerText = 'My additional skills';
 
 
 const additionalSkillDescription = document.createElement('p');
 additionalSkillDescription.className = 'regular-text';
+additionalSkillDescription.style.fontSize = '1.3rem';
 additionalSkillDescription.innerText = 'These are the primary skills I have acquired while working as a contact center operator. I can\'t ignore these experiences and skills because I use it`s every time in my daily life, and I believe, will help me in other spheres:';
 
 
 const additionalSkillDescriptionRow = document.createElement('div');
 additionalSkillDescriptionRow.className = 'row regular-text text-center';
+additionalSkillDescriptionRow.style.fontSize = '1.3rem';
 
 
 additionalSkillsContainerRow.appendChild(additionalSkillsContainer);

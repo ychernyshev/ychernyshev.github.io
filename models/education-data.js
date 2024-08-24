@@ -38,7 +38,7 @@ const educationCertificatesList = [
         'name': 'Quality Assurance Group',
         'date': '2013',
         'title': 'QA Engineer',
-        'description': `<ul class="list-group list">
+        'description': `<ul class="list-group list" style="font-size: 1.3rem;">
                         The following knowledge was gained from this course:
                         <li class="list-group-item bg-transparent">
                             SDLC understanding;

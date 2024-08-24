@@ -2,7 +2,8 @@ function HigherEducationDescription(item) {
     // Diploma
     const educationDescriptionContainerRow = document.createElement('div');
     educationDescriptionContainerRow.className = 'row';
-    
+    educationDescriptionContainerRow.style.fontSize = '1.3rem';
+
     
     const educationDescriptionItemLeft = document.createElement('div');
     educationDescriptionItemLeft.className = 'col-lg-4 col-sm-12 text-dark my-auto media-paddings media-text-center';
@@ -19,16 +20,18 @@ function HigherEducationDescription(item) {
     
     const educationItemCenter = document.createElement('p');
     educationItemCenter.className = 'regular-text';
+    educationItemCenter.style.fontSize = '1.3rem';
     educationItemCenter.innerText = item.title;
     
     
     const educationDescriptionItemRight = document.createElement('div');
-    educationDescriptionItemRight.className = 'col-lg-2 col-sm-5';
+    educationDescriptionItemRight.className = 'col-lg-2 col-sm-5 my-auto';
     
     
     const educationItemRight = document.createElement('a');
     educationItemRight.setAttribute('href', 'https://drive.google.com/file/d/1dV36hlZryFvs-DCh967Z-uEw8rbENHzr/view?usp=drive_link');
     educationItemRight.className = 'btn btn-warning btn-block right-angle media-paddings';
+    educationItemRight.style.fontSize = '1.3rem';
     educationItemRight.setAttribute('target', '_blank');
     educationItemRight.innerText = 'Diploma';
 
@@ -89,6 +92,7 @@ function AdditionalEducationDescription(item) {
 
     const certificateDescriptionCenter = document.createElement('p');
     certificateDescriptionCenter.className = 'regular-text';
+    certificateDescriptionCenter.style.fontSize = '1.3rem';
     certificateDescriptionCenter.innerHTML = '<p>' + item.title + '</p>' + item.description;
 
 
@@ -109,6 +113,7 @@ function AdditionalEducationDescription(item) {
         const projectLinkButton = document.createElement('a');
         projectLinkButton.setAttribute('href', '');
         projectLinkButton.className = 'btn btn-warning btn-block right-angle my-auto media-paddings';
+        projectLinkButton.style.fontSize = '1.3rem';
         projectLinkButton.setAttribute('target', '_blank');
         projectLinkButton.innerText = 'Project';
 
@@ -116,6 +121,7 @@ function AdditionalEducationDescription(item) {
         const certificateLinkButton = document.createElement('a');
         certificateLinkButton.setAttribute('href', item.certificate);
         certificateLinkButton.className = 'btn btn-warning btn-block right-angle my-auto media-paddings';
+        certificateLinkButton.style.fontSize = '1.3rem';
         certificateLinkButton.setAttribute('target', '_blank');
         certificateLinkButton.innerText = 'Certificate';
 
@@ -125,6 +131,7 @@ function AdditionalEducationDescription(item) {
         const certificateLinkButton = document.createElement('a');
         certificateLinkButton.setAttribute('href', item.certificate);
         certificateLinkButton.className = 'btn btn-warning btn-block right-angle my-auto media-paddings';
+        certificateLinkButton.style.fontSize = '1.3rem';
         certificateLinkButton.setAttribute('target', '_blank');
         certificateLinkButton.innerText = 'Certificate';
 

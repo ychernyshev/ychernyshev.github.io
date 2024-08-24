@@ -8,22 +8,24 @@ function jobCard(item) {
 
 
     const jobTitle = document.createElement('h5');
-    jobTitle.className = 'text-uppercase';
+    jobTitle.className = 'text-uppercase regular-text font-weight-bold';
     jobTitle.innerText = item.name;
 
 
     const jobPossition = document.createElement('p');
-    // jobPossition.className = 'regular-text';
+    jobPossition.className = 'regular-text';
     jobPossition.innerText = item.position;
 
 
     const jobDate = document.createElement('p');
-    // jobDate.className = 'regular-text';
+    jobDate.className = 'regular-text';
+    jobDate.style.fontSize = '1.3rem';
     jobDate.innerText = item.date;
 
 
     const cardBodyRowRight = document.createElement('div');
     cardBodyRowRight.className = 'col-lg-8 col-sm-12 bg-dark text-justify p-4 regular-text text-light';
+    cardBodyRowRight.style.fontSize = '1.3rem';
 
 
     const jobDescription = document.createElement('p');
@@ -42,6 +44,7 @@ function jobCard(item) {
 
     const examplePreviewLink = document.createElement('a');
     examplePreviewLink.setAttribute('href', '');
+    examplePreviewLink.className = 'btn btn-warning right-angle';
     examplePreviewLink.className = 'btn btn-warning right-angle';
     examplePreviewLink.setAttribute('target', '_blank');
     examplePreviewLink.innerText = 'View';

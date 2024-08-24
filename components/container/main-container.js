@@ -23,4 +23,4 @@ mainContentContainer.appendChild(mainContentRow);
 mainContentContainer.appendChild(contactsButtonItem);
 mainContentRow.appendChild(theLeftSideOfTheMainContainer);
 mainContentRow.appendChild(theRightSideOfTheMainContainer);
-mainContentContainer.appendChild(additionalSkillsContainerRow);
+mainContentRow.appendChild(additionalSkillsContainerRow);
