@@ -1,16 +1,12 @@
 function SkillsElementsTable(skill) {
     const rightSideSkillsElementCell = document.createElement('div');
     rightSideSkillsElementCell.className = 'col-xl-3 col-lg-3 col-sm-6 col-xs-6 bg-dark p-3';
+    rightSideSkillsElementCell.style.fontSize = '1.5rem';
     rightSideSkillsElementCell.style.textAlign = 'center';
     rightSideSkillsElementCell.innerHTML = skill.name;
     
-    //const rightSideSkillsElementCellContent = document.createElement('span');
-    //rightSideSkillsElementCellContent.style.textAlign = 'center';
-    //rightSideSkillsElementCellContent.innerHTML = skill.name;
-    
     containerRightSide.appendChild(rightSideSkillsElementCellRow);
     rightSideSkillsElementCellRow.appendChild(rightSideSkillsElementCell);
-    //rightSideSkillsElementCell.appendChild(rightSideSkillsElementCellContent);
 }
 
 const intro = document.createElement('div');
@@ -56,6 +52,7 @@ rightSideSubtitle.innerHTML = `Hi. My name is <span class="text-warning">Eugene<
 
 const rightSideDescription = document.createElement('p');
 rightSideDescription.className = 'lead regular-text mt-3';
+rightSideDescription.style.fontSize = '1.3rem';
 rightSideDescription.innerHTML = 'I like Django and Vue.js. Firstly I have used only Django for my projects, but I saw that I need in much comfortable and reactive frontend. So, I am using both of these technologies to realize my ideas. You can see the list of technologies that I am exploring:';
 
 
