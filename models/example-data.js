@@ -1,7 +1,7 @@
 const examplesList = [
     {
         'name': '',
-        'url': 'https://www.unite.ai/wp-content/uploads/2022/04/AI-Python-Libraries.png',
+        'url': './assets/images/p1.png',
         'technology': '',
     },
     {

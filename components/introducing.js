@@ -1,7 +1,6 @@
 function SkillsElementsTable(skill) {
     const rightSideSkillsElementCell = document.createElement('div');
     rightSideSkillsElementCell.className = 'col-xl-3 col-lg-3 col-sm-6 col-xs-6 bg-dark p-3';
-    rightSideSkillsElementCell.style.fontSize = '1.5rem';
     rightSideSkillsElementCell.style.textAlign = 'center';
     rightSideSkillsElementCell.innerHTML = skill.name;
     

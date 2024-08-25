@@ -9,6 +9,7 @@ numberOfExamples.style.marginTop = '-12rem';
 numberOfExamples.style.marginBottom = '-15rem';
 numberOfExamples.style.marginLeft = '-15rem';
 numberOfExamples.style.fontSize = '30rem';
+numberOfExamples.style.color = '#0057B5';
 numberOfExamples.innerText = '4';
 
 
