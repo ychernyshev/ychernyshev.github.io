@@ -14,13 +14,14 @@ function ExampleXardShower(item) {
 
     const exampleGridRow = document.createElement('div');
     exampleGridRow.className = 'row';
-    exampleGridRow.style.position = 'absolute'; 
+    exampleGridRow.style.position = 'absolute';
     exampleGridRow.style.top = '-2rem';
     exampleGridRow.style.left = '2rem'; 
 
 
     const exampleGridCol = document.createElement('div');
     exampleGridCol.className = 'col-xl-12 mb-3 p-1';
+    // exampleGridCol.style.position = 'relative';
 
 
     const exampleItemLayer = document.createElement('div');
@@ -35,10 +36,28 @@ function ExampleXardShower(item) {
     exampleItem.setAttribute('alt', item.name);
 
 
+    const examplePreview = document.createElement('div');
+    examplePreview.className = 'col-6';
+    examplePreview.style.position = 'relative';
+    examplePreview.style.top = '-12.5rem';
+    examplePreview.style.left = '.36rem';
+    examplePreview.style.background = '#dedede';
+
+
+    const exampleCode = document.createElement('div');
+    exampleCode.className = 'col-6';
+    exampleCode.style.position = 'relative';
+    exampleCode.style.top = '-15.5rem';
+    exampleCode.style.left = '0';
+    exampleCode.style.background = '#dedede';
+
+
     theLeftSideOfTheMainContainer.appendChild(exampleCardFirstLayer);
     exampleCardFirstLayer.appendChild(exampleCardSecondLayer);
     exampleCardSecondLayer.appendChild(exampleGridRow);
     exampleGridRow.appendChild(exampleGridCol);
     exampleGridCol.appendChild(exampleItemLayer);
     exampleItemLayer.appendChild(exampleItem);
+    exampleGridCol.appendChild(examplePreview);
+    exampleGridCol.appendChild(exampleCode);
 }
