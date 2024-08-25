@@ -8,8 +8,9 @@ function ExampleXardShower(item) {
     // exampleCardSecondLayer.className = 'mb-1';
     exampleCardSecondLayer.style.background = '#007BFF';
     exampleCardSecondLayer.style.width = '100%';
-    exampleCardSecondLayer.style.height = '12rem';
+    exampleCardSecondLayer.style.height = '12.25rem';
     exampleCardSecondLayer.style.position = 'relative';   
+    exampleCardSecondLayer.style.border = '.3rem solid #F8F9FA';
 
 
     const exampleGridRow = document.createElement('div');
@@ -28,6 +29,7 @@ function ExampleXardShower(item) {
     exampleItemLayer.className = 'card p-1 right-angle';
     exampleItemLayer.style.width = '100%';
     exampleItemLayer.style.height = '100%';
+    exampleItemLayer.style.border = 'none';
 
 
     const exampleItem = document.createElement('img');
