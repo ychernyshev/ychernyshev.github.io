@@ -15,7 +15,7 @@ const examplesList = [
   },
   {
     name: "",
-    url: "https://dlabs.ai/wp-content/uploads/2021/01/JS-w-Machine-Learning-1024x538.png",
+    url: "./assets/images/p3.png",
     technology: "",
     examplePreviewUrl: "",
     exampleCodeUrl: "",
