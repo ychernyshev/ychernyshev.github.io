@@ -10,6 +10,7 @@ function SkillsElementsTable(skill) {
 
 const intro = document.createElement('div');
 intro.className = 'jumbotron jumbotron-fluid text-light bg-gradient-dark';
+intro.id = 'introducing';
 
 
 const introContainer = document.createElement('div');

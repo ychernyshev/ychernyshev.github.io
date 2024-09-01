@@ -1,4 +1,5 @@
 const cardBody = document.createElement('div');
+cardBody.id = 'worked';
 
 
 theRightSideOfTheMainContainer.appendChild(theDownloadBodyContainerRow);

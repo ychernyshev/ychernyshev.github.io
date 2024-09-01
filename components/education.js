@@ -49,7 +49,7 @@ function HigherEducationDescription(item) {
     additionalDescriptionItem.innerText = 'Certificates';
 
 
-    theRightSideOfTheMainContainer.appendChild(educationDescriptionContainer)
+    theRightSideOfTheMainContainer.appendChild(educationDescriptionContainer);
     educationDescriptionContainer.appendChild(educationDescriptionContainerRow);
 
 
@@ -61,8 +61,8 @@ function HigherEducationDescription(item) {
     educationDescriptionItemCenter.appendChild(educationItemCenter);
 
 
-    educationDescriptionContainerRow.appendChild(educationDescriptionItemRight)
-    educationDescriptionItemRight.appendChild(educationItemRight)
+    educationDescriptionContainerRow.appendChild(educationDescriptionItemRight);
+    educationDescriptionItemRight.appendChild(educationItemRight);
 
 
     educationDescriptionContainer.appendChild(additionalDescriptionContainerRow);
@@ -155,7 +155,7 @@ educationShowButtonBody.className = ' col-xl-12 text-center right-angle';
 
 const educationButton = document.createElement('a');
 educationButton.className = 'w-100 btn';
-educationButton.setAttribute('href', '#collapse3');
+educationButton.setAttribute('href', '#education');
 educationButton.setAttribute('data-toggle', 'collapse');
 educationButton.setAttribute('role', 'button');
 educationButton.setAttribute('aria-expanded', 'true');
@@ -165,7 +165,7 @@ educationButton.innerText = 'Education';
 
 const educationDescriptionContainer = document.createElement('div');
 educationDescriptionContainer.className = 'col-12 p-3 text-size-1 collapse show';
-educationDescriptionContainer.id = 'collapse3';
+educationDescriptionContainer.id = 'education';
 
 
 educationShowButtonContainerRow.appendChild(educationShowButtonBody);
