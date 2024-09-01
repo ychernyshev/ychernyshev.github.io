@@ -51,7 +51,7 @@ function jobCard(item) {
 
 
     const exampleCodeLink = document.createElement('a');
-    exampleCodeLink.setAttribute('href', '');
+    exampleCodeLink.setAttribute('href', item.exampleCodeUrl);
     exampleCodeLink.className = 'btn btn-warning right-angle';
     exampleCodeLink.setAttribute('target', '_blank');
     exampleCodeLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">\n' +

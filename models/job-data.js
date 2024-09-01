@@ -15,7 +15,7 @@ const jobList = [
                                 </li>
                             </ul>`,
         'examplePreviewUrl': '#',
-        'exampleCodeUrl': '#',
+        'exampleCodeUrl': 'https://github.com/ychernyshev/the_postman_crm__example',
         'experience': 'This job pushed me to learn Vue.js',
     },
     {
@@ -100,7 +100,7 @@ const jobList = [
                                 </li>
                             </ul>`,
         'examplePreviewUrl': '#',
-        'exampleCodeUrl': '#',
+        'exampleCodeUrl': 'https://github.com/ychernyshev/platform_4.0',
         'experience': 'The project in the code base was rewritten from scratch for Vue.js',
     },
-] 
+];

@@ -18,8 +18,8 @@ theRightSideOfTheMainContainer.appendChild(educationShowButtonContainerRow);
 
 educationDiplomasList.forEach(item => {
     HigherEducationDescription(item);
-})
+});
 
 educationCertificatesList.forEach(item => {
     AdditionalEducationDescription(item);
-})
+});
