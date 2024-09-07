@@ -111,9 +111,12 @@ function AdditionalEducationDescription(item) {
 
     if(item.project.length >= 1) {
         const projectLinkButton = document.createElement('a');
-        projectLinkButton.setAttribute('href', '');
+        //projectLinkButton.setAttribute('href', '');
         projectLinkButton.className = 'btn btn-warning btn-block right-angle my-auto media-paddings';
         projectLinkButton.style.fontSize = '1.3rem';
+        projectLinkButton.setAttribute('onclick', 'ExampleWindowShowing()');
+        projectLinkButton.setAttribute('data-toggle', 'modal');
+        projectLinkButton.setAttribute('data-target', '#examplesWindow');
         projectLinkButton.setAttribute('target', '_blank');
         projectLinkButton.innerText = 'Project';
 
