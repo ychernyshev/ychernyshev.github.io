@@ -1,4 +1,29 @@
 function ExampleWindowShowing() {    
+    function PriviewImageAndLink(item) {
+        const examplePreviewCol = document.createElement("div");
+        examplePreviewCol.className = "col-xl-6 col-sm-12 mb-2";
+
+        const examplePreviewItem = document.createElement("div");
+        // examplePreviewItem.className = "p-1 border";
+
+
+        const examplePreviewLink = document.createElement('a');
+        examplePreviewLink.setAttribute("href", item.project_src);
+
+
+        const examplePreviewImg = document.createElement("img");
+        examplePreviewImg.setAttribute("src", item.image_src);
+        examplePreviewImg.style.width = "100%";
+
+
+        examplePreviewRow.appendChild(examplePreviewCol);
+        examplePreviewCol.appendChild(examplePreviewItem);
+        examplePreviewItem.appendChild(examplePreviewLink);
+        examplePreviewLink.appendChild(examplePreviewImg);
+        // examplePreviewCol.appendChild(examplePreviewImg);
+    }
+
+
     const modalWindowContainer = document.createElement('div');
     modalWindowContainer.className = 'modal fade';
     modalWindowContainer.id = 'examplesWindow';
@@ -32,22 +57,6 @@ function ExampleWindowShowing() {
     examplePreviewRow.className = 'row';
 
 
-    const examplePreviewCol = document.createElement('div');
-    examplePreviewCol.className = 'col-xl-6 col-sm-12 text-center';
-
-
-    const examplePreviewItem = document.createElement('div');
-    examplePreviewItem.className = 'p-2 border';
-    
-
-    const exampleImg = document.createElement('img');
-    exampleImg.setAttribute(
-      "src",
-      "https://files.codingninjas.in/article_images/attributes-of-img-tag-in-html-0-1674996470.webp"
-    );
-    exampleImg.style.width = '100%';
-
-
     mainContentContainer.appendChild(modalWindowContainer);
     modalWindowContainer.appendChild(modalWindowDialog);
     modalWindowDialog.appendChild(modalWindowContent);
@@ -56,7 +65,10 @@ function ExampleWindowShowing() {
 
     modalWindowContent.appendChild(modalWindowContentBody);
     modalWindowContentBody.appendChild(examplePreviewRow);
-    examplePreviewRow.appendChild(examplePreviewCol);
-    examplePreviewCol.appendChild(examplePreviewItem);
-    examplePreviewItem.appendChild(exampleImg);
+    
+    
+    
+    logosJSProjects.forEach(item => {
+        PriviewImageAndLink(item);
+    });
 }
