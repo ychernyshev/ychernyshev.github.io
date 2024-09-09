@@ -8,7 +8,7 @@ function ExampleWindowShowing() {
 
 
         const examplePreviewLink = document.createElement('a');
-        examplePreviewLink.setAttribute("href", item.project_src);
+        examplePreviewLink.setAttribute("href", item.project_live);
 
 
         const examplePreviewImg = document.createElement("img");
