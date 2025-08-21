@@ -1,0 +1,716 @@
+{
+  "en": {},
+  "uk": {
+    "Початок": {
+      "Вступне слово": [
+        {
+          "type": "text",
+          "content": "Маю для тебе невеличке вступне слово перед тим, як дати відповідь на питання \"Чому DUI?\"."
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>Ми всі шукаємо можливості знайти вихід з певних обставин та ситуацій. Саме тому й виникла ідея для створення DUI. Але, тут зіграла, радше, зацікавленість побудувати будинок, в якого фундаментом стане горнятко молока, котре й дозволить показати, як навіть із такого, на перший погляд, крихкого ресурсу, можна збудувати масштабну систему. На базі одного-єдиного обмеженого ресурсу — статичного хостингу — створити систему, яка зазвичай потребує повноцінного VPS. І при цьому не втратити контроль, гнучкість та автономність, які статичний хостинг сильно обмежує. \"Будинок\" на ньому тобі дозволить збудувати рішення, над яким я працюю. Я прагну надати тобі для цього якомога більше тих програмних агентів та механізмів, які зроблять статичний хостинг динамічним — без втрати контролю, без бекенду, і без компромісів. Для цього роду хостингу, може бути так, ти не матимеш бажання створювати таку можливість самостійно. А, отже, DUI може стати тобі в пригоді. Чим?.</p>"
+        },
+        {
+          "type": "text",
+          "content": "<h3>Огляд Horizon Dynamic UI</h3>"
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>Все наше життя – гра, а люди в ній – актори. Цим Шекспірівським твердженням особливо нікого не здивуєш. Але, його можна використати для створення сайту...</p>"
+        },
+        {
+          "type": "text",
+          "content": "<h3>SceneManager</h3>"
+        },
+        {
+          "type": "text",
+          "content": "<b>Збірка</b>"
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>Все відбувається на сцені. Сценою називається головний компонент сторінки. Та щоразу, вона може бути інакшою. Немає якоїсь конкретної сцени, до якої прикріплюється різне компонування сторінок сайту та їх дизайн. Так, на головній сторінці може бути одне компанування, у документації — інакше, а у дашборті — ще якесь інше. Таким чином був видалений \"зайвий\" шар з div у <b>DOM</b>-дереві сайту. Усе монтується одразу у body index.html: </p>"
+        },
+        {
+          "type": "code",
+          "language": "html",
+          "content": "< body id=\"app\">< /body>"
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>До сцени приєднуються інші, другорядні компоненти. Кнопка може бути компонентом. Або компонентом може бути якась форма, яка, за допомогою [Dispatcher](reactive/dispatcher.md) має доступ до LocalStorage, щоб провести якусь операцію з [додавання](interacting_with_data/localStorage/creating.md) чи [оновлення](interacting_with_data/localStorage/updating.md) запису. На твій вибір, все можна розбити на окремі компоненти, слідуючи сучасним трендам організації коду, чи все писати та створювати безпосередньо на самій сцені не боячись повторюваності коду, адже JavaScript з [mount()](deep_immersion_in_components/mount().md) або [onMount()](deep_immersion_in_components/on_mount().md) дозволить цього уникнути. З DUI можна себе не обмежувати у виборі стилю написання коду. Обидва з підходів є рівнозначними.</p>"
+        },
+        {
+          "type": "text",
+          "content": "<h3>RegistryLayoutScheme</h3>"
+        },
+        {
+          "type": "text",
+          "content": "<b>Реєстрація</b>"
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>Сцена щоразу будується [SceneManager](deep_immersion_in_components/scene_manager.md) за заздалегідь визначеною схемою та налаштуваннями. Ці схеми та налаштування зберігаються у [RegistryLayoutScheme](essentials/scene_settings.md). Там зберігаються дані про те:</p><ul><li>базовий контейнер для монтування сцени,</li><li>список компонентів, які мають бути присутніми на сцені,</li><li>які дані мають бути передані у батьківський чи дочірні компоненти, наприклад:<ul><li>змінні,</li><li>заголовки,</li><li>списки,</li><li>блоки коду для відображення тощо</li></ul></li><li>які скрипти та стилі для кожної сцени, додатково, необхідно приєднати.</li></ul>"
+        },
+        {
+          "type": "text",
+          "content": "<h3>LayoutRegistryComponents</h3>"
+        },
+        {
+          "type": "text",
+          "content": "<b>Імпорт</b>"
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>А для того, щоб сцену не перевантажувати імпортами компонентів, існує окремий файл - [LayoutRegistryComponents](essentials/scene_register.md), де й представлений список усіх імпортів сцен та компонентів по всьому застосунку. Цими даними оперує [SceneManager](deep_immersion_in_components/scene_manager.md), коли сцену складає по \"кресленнях\" з [RegistryLayoutScheme](essentials/scene_settings.md). Усе зв'язано через SceneManager, тож додатково викликати нічого не потрібно. Просто, створити сцену, налаштувати її структуру та необхідні для передавання дані у LayoutRegistryComponents, зареєструвати у RegistryLayoutScheme, і SceneManager зробить усе інше.</p>"
+        },
+        {
+          "type": "text",
+          "content": "<h3>Заперечлива архітектура?</h3>"
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>Архітектура Horizon Dynamic UI — це не протест проти традиційної залежності від бекенду, сервісів, і надмірної серверної логіки. Це необхідність у рамках статичного хостингу, що й зумовлює відмову від цих понять на час роботи із Horizon Dynamic UI,  де кожен компонент не потребує нічого, окрім браузеру та коду, яким він керує. Цей інтерфейс, як автономна система — UI, який *не просто живе у браузері*, а реагує і масштабується локально. Архітектура DUI реалізує можливість кожному агенту, компоненту і рендеру виконувати свою роль самостійно. Усе побудовано таким чином, щоб навіть без серверу можливим було рендерити динамічні дані, реагувати на взаємодію із користувачем, зберігати та аналізувати стан, та створювати логіку, як у фреймворках із повним стеком. Ми не можемо використовувати бекенд на статичних хостингах, тому ми *будуємо його у фронтенді*.</p>"
+        },
+        {
+          "type": "text",
+          "content": "<h3>Обирай продовжити! </h3>"
+        },
+        {
+          "type": "text",
+          "content": "<b>[Швидкий старт](quick-start.md)</b>"
+        },
+        {
+          "type": "text",
+          "content": "<p class='text-justify'>Покликання цієї коротенької екскурсії до DUI, надихнути тебе познайомитися із фреймворком по ближче. Адже він створений для втілення твоїх ідей у \"замкненому просторі\". Без втрати контролю, без бекенду, і без компромісів!</p>"
+        }
+      ],
+      "Швидкий старт": [
+        {
+          "type": "text",
+          "content": "Ця елементарна маніпуляція, дозволить вивести твою першу сцену на екран."
+        },
+        {
+          "type": "text",
+          "content": "Для цього потрібно почати зі створення самої сцени, або компоненту для неї, шляхом створення файлу із розширенням <b>*.js</b>."
+        },
+        {
+          "type": "text",
+          "content": "Існує два стилі шаблону - <b>імперативний</b> та <b>декларативний</b>, в межах котрих програмується сцена чи компонент для неї.  Не існує обмежень для використання кожного з них. Однак, для кожного з них закладена своя логіка використання."
+        },
+        {
+          "type": "text",
+          "content": "<b>Імперативний</b> стиль, на прикладі сторінки <b>404</b>, має наступний вигляд:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "export const Page_404_View = {\n    mount(config = {}) {\n        const container = document.getElementById(\"app\");\n\n        if (!container) {\n            console.warn(\"[Page_404_View] Контейнер #page_404 не знайдено — компонент не змонтовано.\");\n            return;\n        }\n\n        container.innerHTML = `\n             ...Code...\n        `;\n    }\n}"
+        },
+        {
+          "type": "text",
+          "content": "Задум використання імперативного стилю, полягає у ідеї, що у конкретному компоненті, іноді, сцені, не прогнозується використання логіки. Однак, знову ж таки, використання її не забороняється. Хоча, керування нею на сторінці вже виглядатиме не таким зручним, як у декларативному стилі сцени чи компоненту для неї."
+        },
+        {
+          "type": "text",
+          "content": "<b>Декларативний</b> стиль, навпроти, передбачає використання логіки у сцені чи то компоненті до неї, тому, виглядає дещо інакше, дозволяючи реалізувати цю логіку більш простим методом:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "export const WelcomeScene = {\n    template: `\n        ...Code...\n    `,\n    mount(config = {}) {\n        const container = document.getElementById(\"welcome-block\");\n\n        if (!container) {\n            console.warn(\"[WelcomeScene] Container #welcome-block not found - component not mounted.\");\n            return;\n        }\n\n        container.innerHTML = renderTemplate(this.template, config);\n\n        if (typeof this.onMount === \"function\") {\n            this.onMount();\n        }\n    },\n    onMount() {}\n}"
+        },
+        {
+          "type": "text",
+          "content": "У цьому варіанті стилю, кодом на сцені чи у компоненті виходить маніпулювати через блок коду <b>template</b>, що значно полегшує цю процедуру, уникаючи прямої ініціалізації контенту сторінки безпосередньо у <b>container.innerHTML = `...сode...`;</b>"
+        },
+        {
+          "type": "text",
+          "content": "Якщо блок коду <b>mount() {}</b> є точкою входу, то блок коду <b>onMount() {}</b> дозволяє розвантажити <b>mount() {}</b>, зосередивши у собі усю логіку, що має бути реалізована у компоненті (сцена, по суті, теж є компонентом, хоча її роль, бути батьківським компонентом для всіх інших її компонентів), після її створення. Назва <b>onMount</b> закладає під собою розуміння того, що код, заключений саме у цей блок почне виконуватися лише після того, як DOM буде побудовано. Але це не зобов'язує тримати <b>mount() {}</b> чистим від коду. На прикладі <b>WelcomeScene</b>, <b>mount</b> теж виконує деякі маніпуляції. У даному випадку, зі створення кнопки переходу до розділу документації <b>DUI</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "mount(config = {}) {\n        const container = document.getElementById(\"welcome-block\");\n\n        if (!container) {\n            console.warn(\"[WelcomeScene] Container #welcome-block not found - component not mounted.\");\n            return;\n        }\n\n        const {title, subtitle, version, tagline, CTA} = config;\n\n        const CTA_label = config.CTA?.label || \"Explore\";\n        const CTA_link = config.CTA?.link?.trim() ? config.CTA.link : \"#page404\";\n\n        const processedConfig = {\n            ...config,\n            CTA_button: `< a href=\"${CTA_link}\" class=\"btn bg-gradient-info mt-3 fs-6\">\n                 ${CTA_label}\n                 <span class=\"badge\">${config.version}</span>\n               < /a>`\n        };\n\n\n        container.innerHTML = renderTemplate(this.template, processedConfig);\n\n        if (typeof this.onMount === \"function\") {\n            this.onMount();\n        }\n    },"
+        },
+        {
+          "type": "text",
+          "content": "Логічно кнопку створювати саме у <b>mount() {}</b>. А от логіку, яка може бути підключена до цієї кнопки, як наприклад, відправлення даних у <b>localStorage</b>, бажано розмістити у <b>onMount() {}</b>, щоб не отримати попередження, про те, що елемент по його <b>id=''</b> ще не доступний. Наприклад, для різноманітних автоматичних дій, які варто, виконувати вже після завантаження DOM-дерева сторінки. Або, для обробки події після натиску на кнопку:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "onMount() {\n        const STORAGE_KEY = \"notes\";\n\n        SceneDispatcher.subscribe(\"add-entry/save\", payload => {\n            const notes = dispatcher.get(STORAGE_KEY) || [];\n\n            const newEntry = typeof payload === \"string\"\n                ? {id: Date.now(), text: payload, timestamp: new Date().toISOString()}\n                : {\n                    id: Date.now(),\n                    text: payload.text,\n                    timestamp: new Date().toISOString()\n                };\n\n            const updatedNotes = [...notes, newEntry];\n\n            console.log(\"[Debug] Notes before saving:\", updatedNotes);\n\n            localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedNotes));\n            dispatcher.set(STORAGE_KEY, updatedNotes);\n        });\n    }"
+        },
+        {
+        "type": "text",
+        "content": "Створений компонент необхідно зареєструвати та сконфігурувати, щоб <b>DUI</b> знав, куди компонент необхідно монтувати, які дані, наприклад <b>title</b> або якийсь статичний список вже можна передати на сцену, чи окремий компонент для неї, а також, структуру сцени, яка має бути змонтована. Останній пункт дозволяє не перевантажувати саму сцену - батьківський компонент, налаштуваннями, відповідно, нагромадженням коду. Ця логіка переслідує ідею єдиного реєстру конфігурацій усіх сцен, що наочно демонструє усю структуру застосунку без необхідності вивчати усі компоненти послідовно. А також, задля того, щоб в застосунку не було одного батьківського елементу, що, дозволяє створювати DOM на 1 елемент меншим, та дозволяє у одному застосунку мати абсолютно різні за структурою сцени, кожну, зі своєю окремою конфігурацією, що спрощує керування кожною з них."
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "welcome_view: {\n        primary_structure: `\n                < main>\n                  < section id=\"welcome-block\"></section>\n                < /main>\n            `,\n        layout: [\n            \"WelcomeView\", \"QuickDocs\", \"CodeBlock\",\n            \"ExamplesList\", \"AddEntry\", \"EntriesList\",\n            \"EditEntry\", \"Footer\",\n        ],\n        config: {\n            WelcomeView: {\n                title: \"Horizon Dynamic UI\",\n                subtitle: \"Your scene-driven front-end engine\",\n                version: \"v0.1.19 Beta\",\n                tagline: \"Pure JS. No build. Host-ready.\",\n                CTA: {label: \"Get Started with Horizon\", link: \"#guide\"},\n            },\n            QuickDocs: {\n                links: [\n                    {label: \"\uD83D\uDCD8 What is Horizon?\", href: \"#guide\"},\n                    {label: \"\uD83D\uDE80 Creating Your First Scene\", href: \"#first-scene\"},\n                    {label: \"\uD83E\uDDE9 Component Structure\", href: \"#components\"}\n                ]\n            },\n            CodeBlock: {\n                codeSnippets: {\n                    example_js: {\n                        title: 'example_js',\n                        language: \"js\",\n                        content: `const msg = \"Hello Horizon\";`\n                    },\n                    example_html: {\n                        title: 'example_html',\n                        language: \"html\",\n                        content: `<div id=\"app\"></div>`\n                    }\n                }\n            },\n        },\n        linkHref: [\"https://unpkg.com/prismjs/themes/prism.css\"],\n        scriptSrc: [\"https://unpkg.com/prismjs/prism.js\", \"https://unpkg.com/prismjs/components/prism-javascript.min.js\"],\n    }"
+        },
+        {
+        "type": "text",
+        "content": "Як можна помітити у наведеному вище відрізку коду, конфігурація дозволяє додавати до кожної окремої сцени свої, ізольовані від інших сцен, стилі та скрипти. Це опція додана та залишена саме у <b>RegistryLayoutScheme.js</b> для того, щоб не \"розкидувати\" налаштування сцен по різних файлах та компонентах, що порушує закладену вище описаний принцип роботи фреймворку."
+        },
+        {
+        "type": "text",
+        "content": "Необхідно вказати структуру нової сцени, і для цього достатньо додати її назву у список <b>layout</b>. Для <b>WelcomeScene</b> це є назва її константи - <b>WelcomeScene</b> у самому компоненті. Щоб вказати, у який контейнер сцена має бути змонтована, цей контейнер потрібно буде ініціювати у <b>primary_structure</b>. Під капотом, <b>DUI</b> через <b>SceneManager</b> зчитає конфігурацію сцени з <b>RegistryLayoutScheme.js</b>, та змонтує код з <b>primary_structure:</b> безпосередньо у <b>< body id=\"app\">< /body></b>"
+        },
+        {
+        "type": "text",
+        "content": "Заключним етапом стане додавання назви сцени у <b>ComponentMap</b>, що розташований у <b>LayoutRegistryComponents.js</b>. Якщо у <b>RegistryLayoutScheme.js</b> ініціювався список назв компонентів, що будуть присутніми на сцені, то у <b>LayoutRegistryComponents.js</b> ініціюється список всіх компонентів, доступних для відображення у застосунку. Можна створити сцени, додати туди інші компоненти та якусь логіку, сконфігурувати їх, однак, вони не будуть показані, поки ці сцени та їх компоненти не будуть додані у список компонентів застосунку. Щоб це не заплутувало, варто тримати у пам'яті, що конфігурація сцен зберігається у файлі <b>RegistryLayoutScheme.js</b> - реєстр схеми макету, а список всіх компонентів застосунку, які доступні для показу, у - <b>LayoutRegistryComponents.js</b> - макет реєстрації компонентів. Перший - це, умовно, список службовців, що працюють у компанії. Другий - список обов'язків кожного службовця окремо."
+        },
+        {
+        "type": "text",
+        "content": "Саме цей файл знімає необхідність у кожній окремій сцені робити до неї імпорти її компонентів й імпорти самих сцен для <b>SceneManager</b>, котрий ці сцени монтує. Це централізація усіх імпортів компонентів у застосунку в одному файлі. Таким чином, це створює дуже комфортні умови для операцій з \"перекидання\", підключення та відключення компонентів між сценами через конфігураційний файл <b>RegistryLayoutScheme.js</b>."
+        },
+        {
+        "type": "text",
+        "content": "<b>LayoutRegistryComponents.js</b> для поточної версії DUI:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "// Pages\nimport { Page_404_View } from \"../../pages/reports/Page_404_View.js\";\nimport { WelcomeScene } from \"../../pages/WelcomeScene.js\";\n\n// Components\nimport { QuickDocs } from \"../../pages/guide/QuickDocs.js\";\nimport { CodeBlock } from \"../../components/CodeBlock.js\";\nimport { ExamplesList } from \"../../components/ExamplesList.js\";\nimport { AddEntry } from \"../../components/entry/AddEntry.js\";\nimport { EntriesList } from \"../../components/entry/EntriesList.js\";\nimport { EditEntry } from \"../../components/entry/EditEntry.js\";\nimport { Footer } from \"../../components/Footer.js\";\n\n// Guide\nimport { GuideMain } from \"../../pages/guide/GuideMain.js\";\nimport { GuideNavigation } from \"../../components/guide/GuideNavigation.js\";\nimport { GuideMenuItem } from \"../../components/guide/GuideMenuItem.js\";\nimport { GuideDescription } from \"../../components/guide/GuideDescription.js\";\n\nexport class LayoutRegistryComponents {\n    static\n    ComponentMap = Object.freeze({\n        // sceneName\n        Page404: Page_404_View,\n        WelcomeView: WelcomeScene,\n        // componentName\n        QuickDocs,\n        CodeBlock,\n        ExamplesList,\n        AddEntry,\n        EntriesList,\n        EditEntry,\n        Footer,\n        // Guide\n        GuideMain,\n        GuideNavigation,\n        GuideMenuItem,\n        GuideDescription,\n    });\n}"
+        },
+        {
+        "type": "text",
+        "content": "Базово, це той мінімум, що необхідно знати, щоб створити свою першу сцену, використовуючи <b>Horizon Dynamic UI</b>."
+        }
+      ]
+    },
+    "Основи роботи": {
+      "Налаштування сцени/компоненту у RegistryLayoutScheme": [
+        {
+          "type": "text",
+          "content": "<b>RegistryLayoutScheme.js</b> являє собою об'єкт, що містить, відповідні статичні ключі, значення для котрих необхідно закладати у залежності від очікуваного результату. Для кожної сцени є вже визначений набір ключів, котрими керується <b>SceneManager</b> при створенні сцени. Розглянемо на прикладі <b>WelcomeScene</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "export const RegistryLayoutScheme = {\n    welcome_view: {\n        primary_structure: `\n                < main>\n                  < section id=\"welcome-block\">< /section>\n                < /main>\n            `,\n        layout: [\n            \"WelcomeView\", \"QuickDocs\", \"CodeBlock\",\n            \"ExamplesList\", \"AddEntry\", \"EntriesList\",\n            \"EditEntry\", \"Footer\",\n        ],\n        config: {\n            WelcomeView: {\n                title: \"Horizon Dynamic UI\",\n                subtitle: \"Your scene-driven front-end engine\",\n                version: \"v0.1.19 Beta\",\n                tagline: \"Pure JS. No build. Host-ready.\",\n                CTA: {label: \"Get Started with Horizon\", link: \"#guide\"},\n            },\n            QuickDocs: {\n                links: [\n                    {label: \"\uD83D\uDCD8 What is Horizon?\", href: \"#guide\"},\n                    {label: \"\uD83D\uDE80 Creating Your First Scene\", href: \"#first-scene\"},\n                    {label: \"\uD83E\uDDE9 Component Structure\", href: \"#components\"}\n                ]\n            },\n            CodeBlock: {\n                codeSnippets: {\n                    example_js: {\n                        title: 'example_js',\n                        language: \"js\",\n                        content: `const msg = \"Hello Horizon\";`\n                    },\n                    example_html: {\n                        title: 'example_html',\n                        language: \"html\",\n                        content: `<div id=\"app\"></div>`\n                    }\n                }\n            },\n        },\n        linkHref: [\"https://unpkg.com/prismjs/themes/prism.css\"],\n        scriptSrc: [\"https://unpkg.com/prismjs/prism.js\", \"https://unpkg.com/prismjs/components/prism-javascript.min.js\"],\n    }\n}"
+        },
+        {
+          "type": "text",
+          "content": "Особливості роботи <b>DUI</b> вимагають обов'язкове вказання контейнера компонента, у котрий буде змонтовантований вміст контейнеру. На прикладі <b>Vue.js</b> або <b>React.js</b> - це <code><b>div id=\"app\"</b></code>, у котрий монтується кожний новий компонент. Під час розробки <b>DUI</b>, ідеєю стало позбавитися зайвого <code><b>div</b></code>, що призвело до рішення відправною точкою для монтування залишити <code><b>body id=\"app\"</b></code>. Це дозволяє кожній окремій сцені монтувати у <code><b>body</b></code> своє, незалежне, <b>DOM</b>-дерево та свої, унікальні, залежності, не перевантажуючи імпортами та можливою логікою один централізований компонент, котра буде не витребувана в усіх інших випадках, окрім роботи із конкретною сценою. Для реалізації подібної структури необхідні два елемента, які доречно назвати конфігураційними. Вони належать до <b>Template Composition Engine</b> - частини ядра <b>Horizon Dynamic UI</b>, що займаються збіркою, налаштуванням та монтуванням сцени: <ul><li><b>RegistryLayoutScheme</b> необхідний для створення конфігурації сцени, згідно котрої вона буде створена.</li><li><b>LayoutRegistryComponents</b> необхідний для створення каталогу компонентів, котрі будуть доступні у застосунку для візуалізації.</li></ul>"
+        },
+        {
+          "type": "text",
+          "content": "<b>RegistryLayoutScheme</b> використовує спеціальні ключі:<ul><li><b>primary_structure</b> - де створюється \"main\" контейнер для відображення сцени</li><li><b>layout</b> - це масив, в котрий записуються усі компоненти, що мають бути доступні на сцені</li><li><b>config</b> - використовується для створення масиву даних, що \"з коробки\" доступні на сцені. Це може бути <b>title</b> сторінки, <b>meta</b>-заголовки, списки чогось, наприклад, кнопок. Власне, усе те, що знадобиться на сцені під час її створення. Так можна передати дані з <b>config</b> до сцени чи кожного компоненту, підключеного до сцени через <b>layout</b> </li><li><b>linkHref</b> - дозволяє кожній сцені мати свої, ізольовані від інших сцен, файли стилів</li><li><b>scriptSrc</b> - дозволяє кожній сцені мати свої, ізольовані від інших сцен, файли скриптів, наприклад, сторонніх бібліотек</li></ul>"
+        }
+      ],
+      "Реєстрація сцени/компоненту у LayoutRegistryComponents": [
+        {
+          "type": "text",
+          "content": "<b>LayoutRegistryComponents</b> необхідний для створення каталогу компонентів, котрі будуть доступні у застосунку для візуалізації. Усі інші компоненти, котрі, якщо, навіть, й сконфігуровані, не будуть відображені, якщо не будуть занесені у цей файл. По своїй суті, у цьому файлі зберігаються усі імпорти компонентів, які зчитує <b>SceneManager</b> та робить їх доступними по всьому застосунку. Це позбавляє необхідності робити імпорт компоненту у конкретній сцені, або, порушувати <b>DRY</b> повторюючи цей імпорт у іншій."
+        },
+        {
+          "type": "text",
+          "content": "Для поточної версії <b>DUI</b>, <b>LayoutRegistryComponents</b> виглядає наступним чином:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "// Pages\nimport { Page_404_View } from \"../../pages/reports/Page_404_View.js\";\nimport { WelcomeScene } from \"../../pages/WelcomeScene.js\";\n\n// Components\nimport { QuickDocs } from \"../../pages/guide/QuickDocs.js\";\nimport { CodeBlock } from \"../../components/CodeBlock.js\";\nimport { ExamplesList } from \"../../components/ExamplesList.js\";\nimport { AddEntry } from \"../../components/entry/AddEntry.js\";\nimport { EntriesList } from \"../../components/entry/EntriesList.js\";\nimport { EditEntry } from \"../../components/entry/EditEntry.js\";\nimport { Footer } from \"../../components/Footer.js\";\n\n// Guide\nimport { GuideMain } from \"../../pages/guide/GuideMain.js\";\nimport { GuideNavigation } from \"../../components/guide/GuideNavigation.js\";\nimport { GuideMenuItem } from \"../../components/guide/GuideMenuItem.js\";\nimport { GuideDescription } from \"../../components/guide/GuideDescription.js\";\n\nexport class LayoutRegistryComponents {\n    static\n    ComponentMap = Object.freeze({\n        // sceneName\n        Page404: Page_404_View,\n        WelcomeView: WelcomeScene,\n        // componentName\n        QuickDocs,\n        CodeBlock,\n        ExamplesList,\n        AddEntry,\n        EntriesList,\n        EditEntry,\n        Footer,\n        // Guide\n        GuideMain,\n        GuideNavigation,\n        GuideMenuItem,\n        GuideDescription,\n    });\n}"
+        },
+        {
+          "type": "text",
+          "content": "Така схема дозволяє спростити додавання, видалення або перенесення компоненту до іншої сцени без необхідності у кожній окремій сцені робити чи видаляти імпорти цього компоненту. Достатньо додати чи прибрати компонент з <b>layout</b> конкретної сцени у <b>RegistryLayoutScheme</b>."
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "layout: [\n            \"WelcomeView\", \"QuickDocs\", \"CodeBlock\",\n            \"ExamplesList\", \"AddEntry\", \"EntriesList\",\n            \"EditEntry\", \"Footer\",\n        ]"
+        }
+      ],
+      "Прив'язування стилів та скриптів": [
+        {
+          "type": "text",
+          "content": "Як й інші фреймворки, <b>DUI</b> дозволяє додавати до кожної окремої сцени свої, ізольовані від інших сцен, файли стилів та скриптів. Для цього необхідно використати ключі <b>linkHref</b> та <b>scriptSrc</b> у <b>RegistryLayoutScheme</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "linkHref: [\"https://unpkg.com/prismjs/themes/prism.css\"],\nscriptSrc: [\"https://unpkg.com/prismjs/prism.js\", \"https://unpkg.com/prismjs/components/prism-javascript.min.js\"],"
+        },
+        {
+          "type": "text",
+          "content": "Додавати значення обох масивів можливо списком, якщо файлів стилів чи скриптів є декілька</b>."
+        }
+      ],
+      "Створення посилань та кнопок": [
+        {
+          "type": "text",
+          "content": "Для роботи із посиланнями та кнопками у <b>Horizon Dynamic UI</b> доступний спектр інструментів. Кнопки та посилання можливо додати на сторінку трьома способами:<ul><li><b>ручне створення посилань та кнопок</b> - шляхом звичайного тегу <b>a</b> з <b>html</b></li><li><b>оголошення кнопок у межах mount() та виклик у шаблоні без необхідності дублювання коду</b>:</li></ul>"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "const CTA_label = config.CTA?.label || \"Explore\";\n    const CTA_link = config.CTA?.link?.trim() ? config.CTA.link : \"#page404\";\n\n    const processedConfig = {\n        ...config,\n        CTA_button: `< a href=\"${CTA_link}\" class=\"btn bg-gradient-info mt-3 fs-6\">\n             ${CTA_label}\n             < span class=\"badge\">${config.version}< /span>\n           < /a>`\n    };"
+        },
+        {
+          "type": "text",
+          "content": "Другий спосіб дозволяє створити одну кнопку/посилання, та додавати її у шаблон на будь-яке місце за допомогою <b>{CTA_button}</b>. Такий метод стає доречним у тих випадках, коли, у декількох місцях сторінки, необхідно відобразити однакову кнопку чи посилання. Наприклад у головному меню та футері, чи запрошуючи до реакції  на якусь пропозицію, у різних місцях сторінки, поки вона переглядається."
+        },
+        {
+          "type": "text",
+          "content": "Кнопка чи посилання додаються у блок <b>mount() {}</b> для її додавання у <b>DOM</b>-дерево під час його побудови. Так вона реалізована у <b>WelcomeScene</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "mount(config = {}) {\n        const container = document.getElementById(\"welcome-block\");\n\n        if (!container) {\n            console.warn(\"[WelcomeScene] Container #welcome-block not found - component not mounted.\");\n            return;\n        }\n\n        const {title, subtitle, version, tagline, CTA} = config;\n\n        const CTA_label = config.CTA?.label || \"Explore\";\n        const CTA_link = config.CTA?.link?.trim() ? config.CTA.link : \"#page404\";\n\n        const processedConfig = {\n            ...config,\n            CTA_button: `< a href=\"${CTA_link}\" class=\"btn bg-gradient-info mt-3 fs-6\">\n                 ${CTA_label}\n                 < span class=\"badge\">${config.version}< /span>\n               < /a>`\n        };\n\n\n        container.innerHTML = renderTemplate(this.template, processedConfig);\n\n        if (typeof this.onMount === \"function\") {\n            this.onMount();\n        }\n    },"
+        },
+        {
+          "type": "text",
+          "content": "Спочатку запитуються дані з <b>RegistryLayoutScheme</b>, якщо такі були додані у <b>config</b> сцени. Як у даному випадку із <b>CTA</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "config: {\n        WelcomeView: {\n                title: \"Horizon Dynamic UI\",\n                subtitle: \"Your scene-driven front-end engine\",\n                version: \"v0.1.19 Beta\",\n                tagline: \"Pure JS. No build. Host-ready.\",\n                CTA: {label: \"Get Started with Horizon\", link: \"#guide\"},\n            },"
+        },
+        {
+          "type": "text",
+          "content": "Наступним кроком створюється кнопка та згодом, монтується сцена."
+        },
+        {
+          "type": "text",
+          "content": "<ul><li><b>генерація посилань та кнопок за допомогою хелпера <b>useCTA</b>, у котрих необхідна особливо налаштована логіка події</b>:</li></ul>"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "const btn = useCTA({ label: \"Дізнатися більше\", link: \"/pricing\" }, \"v1.2\", {\n  target: \"_blank\",\n  className: \"btn btn-info\",\n  title: \"Перейти до тарифів\"\n});\ndocument.querySelector(\"#cta-holder\").appendChild(btn);"
+        },
+        {
+          "type": "text",
+          "content": "Такий підхід дозволяє, так би мовити, \"костимізувати\" кнопку чи посилання необхідним чином для конкретного випадку. Вказати тип - <b>кнопка</b> чи <b>посилання</b>, список класів <b>CSS</b>-стилів, <b>id</b>, <b>title</b> та інші параметри хелпера <b>useCTA</b>."
+        },
+        {
+          "type": "text",
+          "content": "Кнопка чи посилання додаються у блок <b>mount() {}</b> для її додавання у <b>DOM</b>-дерево під час його побудови."
+        }
+      ],
+      "Виклик messages": [
+        {
+          "type": "text",
+          "content": "Сповіщення - це один з найвикористованіших компонентів будь-якого фреймворку, що дозволяють демонструвати сповіщення щодо результату виконання дій у застосунку, такі, як: \"<b>успіх</b>\", \"<b>помилку виконання</b>\", \"<b>попередження</b>\", \"<b>інформативне сповіщення</b>\". Використання системи  повідомлень у <b>DUI</b> відбувається шляхом залучення до цієї дії хелперу <b>useMessages</b>, що дозволяє викликати відповідні повідомлення згідно представленого списку:<ul><li><b>success</b></li><li><b>warning</b></li><li><b>error</b></li><li><b>info</b></li></ul> "
+        },
+        {
+          "type": "text",
+          "content": "Підключення показу повідомлення відбувається за допомогою імпорту <b>useMessages</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {useMessages} from \"../../core/helpers/useMessages.js\";"
+        },
+        {
+          "type": "text",
+          "content": "Подальше використання повідомлень відбувається вже після створення <b>DOM</b> з <b>onMunt() {}</b> секції:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "export const AddEntry = {\n    template: ``,\n    mount(config = {}) {},\n    onMount() {\n        const messages = useMessages();\n        messages.success(\"add entry\");\n        \n        messages.error(\"error\");\n        \n        messages.warning(\"warning\");\n        \n        messages.info(\"info\");\n    }\n}"
+        }
+      ]
+    },
+    "Роутинг": {
+      "Хеш-посилання": [
+        {
+          "type": "text",
+          "content": "Хеш-посилання є найпростішим методом адресування усередині <b>Horizon Dynamic UI</b> між його частинами. Для використання таких посилань, достатньо створити відповідний роут у <code>router -> index.js</code>. Наприклад:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "export function init(app) {\n    app.routing.add(\"page_404\", () => {\n        app.sceneManager.mountScene(\"page_404\");\n    });\n    Інший код...\n}"
+        },
+        {
+          "type": "text",
+          "content": "У шаблоні використати тег <b>a</b>: <code>< a href=\"#page_404\">Page 404< /a></code>"
+        }
+      ],
+      "Створення {CTA_button}": [
+        {
+          "type": "text",
+          "content": "<b>CTA</b> (Call To Action) є більш просунутим рішенням для створення кнопок та посилань, ніж <b>хеш-посилання</b>. Цей метод зручніший за хеш-посилання у тих випадках, коли, до прикладу, потрібні ідентичні кнопки у різних місцях сторінки. Це дозволяє уникнути дублювання коду та порушення принципу <b>DRY</b> (Don`t Repeat Yourself). До прикладу, у меню, що можуть мати однакові посилання у Header та Footer, і т.д. Кнопка <b>CTA</b> створюються безпосередньо у <b>js</b> коді, в секції <b>mount(){}</b>, яка й займається монтуванням компоненту у DOM-дерево. Виклик екземпляру кнопки відбувається у потрібних місцях шаблону <b>HTML</b> шляхом додавання <code>{CTA_button}</code>. Назва цієї інтерполяції (заміни коду) у js може бути довільною, не тільки <b>CTA_button</b>."
+        },
+        {
+          "type": "text",
+          "content": "Створення кнопки <b>CTA</b> відбувається наступним чином. Для більшої динаміки створити <code>const CTA_label</code> та <code>const CTA_link</code>. Це дозволить з <b>js</b> генерувати <b>CTA</b> або керувати цими даними <b>label</b> або <b>link</b>. Тоді потрібно буде змінити тип змінної на <b>let</b>."
+        },
+        {
+          "type": "text",
+          "content": "У базовому шаблоні <b>DUI</b> використовується <b>CTA</b> із перевіркою, чи <b>label</b> має значення, інакше підставляє значення за замовченням, а також, чи є значення в <b>link</b>, інакше підставляє хеш-посилання на сторінку 404. Виглядає це наступним чином:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "const CTA_label = config.CTA?.label || \"Explore\";\nconst CTA_link = config.CTA?.link?.trim() ? config.CTA.link : \"#page404\";"
+        },
+        {
+          "type": "text",
+          "content": "На основі цих даних генерується сама кнопка чи посилання із підстановкою необхідних даних з <b>label</b> та <b>link</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "const processedConfig = {\n            ...config,\n            CTA_button: `< a href=\"${CTA_link}\" class=\"btn bg-gradient-info mt-3 fs-6\">\n                 ${CTA_label}\n                 < span class=\"badge\">${config.version}< /span>\n               < /a>`\n        };"
+        },
+        {
+          "type": "text",
+          "content": "Використання <b>CTA</b> дозволяє: <ul><li>централізовано керувати CTA через config (<code>RegistryLayoutScheme.js</code> -> <code>config</code> -> <code>mount() {}</code> компоненту)</li></ul>"
+        },
+        {
+          "type": "text",
+          "content": "<b>RegistryLayoutScheme.js:</b>"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "welcome_view: {\n        primary_structure: `...`,\n        layout: [...],\n        config: {\n            WelcomeView: {\n                ...\n                CTA: {label: \"Get Started with Horizon\", link: \"#guide\"},\n            },"
+        },
+        {
+          "type": "text",
+          "content": "<b>mount() {}</b> компоненту:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "const {title, subtitle, version, tagline, CTA} = config;\n\n        const CTA_label = config.CTA?.label || \"Explore\";\n        const CTA_link = config.CTA?.link?.trim() ? config.CTA.link : \"#page404\";\n\n        const processedConfig = {\n            ...config,\n            CTA_button: `< a href=\"${CTA_link}\" class=\"btn bg-gradient-info mt-3 fs-6\">\n                 ${CTA_label}\n                 < span class=\"badge\">${config.version}< /span>\n               < /a>`\n        };"
+        },
+        {
+          "type": "text",
+          "content": "<ul><li>легко змінювати поведінку кнопки без переписування HTML</li><li>підтримувати гнучкість і масштабованість (наприклад, для різних сцен або компонентів).</li></ul>"
+        }
+      ],
+      "Використання useCTA() хелпера": [
+        {
+          "type": "text",
+          "content": "Використання useCTA() хелпера дозволяє не просто генерувати сам тег, але й передавати у кнопку чи посилання конкретні параметри. Виклик кнопки у <b>mount() {}</b> виглядає наступним чином:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "useCTA({ label: \"Дізнатися більше\", link: \"/pricing\" }, \"v1.2\", {\n  className: \"btn btn-info\",\n  target: \"_blank\",\n  title: \"Перейти на сторінку\"\n});"
+        },
+        {
+          "type": "text",
+          "content": "або"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "useCTA({ label: \"Натисни мене\" }, \"v1.2\", {\n  elementType: \"button\",\n  className: \"btn btn-success\",\n  onClick: () => showModal()\n});"
+        },
+        {
+          "type": "text",
+          "content": "Це відрізняє кнопку CTA оголошену у mount() {} \"вручну\" від згенерованої за допомогою хелперу <b>useCTA</b>. Варіант із <b>useCTA</b> створює умови для додавання кнопці інтерактивності. Згенерована кнопка через <b>useCTA</b> приймає події, нею можна гнучко керувати."
+        },
+        {
+          "type": "text",
+          "content": "Кнопка додається у шаблон, як дочірній елемент: <code>document.getElementById(\"cta-container\").appendChild(button);</code>."
+        },
+        {
+          "type": "text",
+          "content": "Згенерована кнопка приймає наступні параметри:<ul><li><code>elementType = href ? \"a\" : \"button\"</code></li><li><code>target</code></li><li><code>className</code></li><li><code>id</code></li><li><code>rel</code></li><li><code>ariaLabel</code></li><li><code>title</code></li><li><code>onClick</code></li></ul>"
+        },
+        {
+          "type": "text",
+          "content": "Попередньо, хелпер має бути імпортований у компонент: <code>import {use_cta} from \"../core/helpers/useCTA.js\";</code>"
+        }
+      ]
+    },
+    "Реактивна підсистема": {
+      "Робота із Dispatcher": [
+        {
+          "type": "text",
+          "content": "Збереження даних за допомоги форми дозволить розширити спектр можливості взаємодіяти із застосунком. <b>DUI</b> дозволяє це робити за допомогою <b>Dispatcher</b>. Це агент, котрий, у базовому варіанті, дозволяє створювати записи у localStorage, змінювати їх чи видаляти. Також, робити підписку на подію та реактивне оновлення стану, відновлення поточного стану при монтуванні компоненту, скажімо, якийсь індикатор чи графік чогось."
+        },
+        {
+          "type": "text",
+          "content": "Нижче представлена форма, що дозволить додати запис у localStorage, після додавання чого, спрацює підписка не зміну стану (додавання запису) та реактивне відображення запису на екрані."
+        },
+        {
+          "type": "text",
+          "content": "<div class=\"row\"><div class=\"col-xl-10\"><section id=\"add-entry\"></section><div class=\"col-xl-6\"><div class=\"row\"><div class=\"col-xl-10\"><section id=\"edit-entry\"></section></div><div class=\"col-xl-2\" style=\"display: none\"><ul id=\"entries-list\"></ul></div></div><section id=\"edit-entry\"></section></div>"
+        },
+        {
+          "type": "text",
+          "content": "<div class=\"container\" id=\"entries-list\"></div><div class=\"container\" id=\"edit-entry\"></div><div class=\"container\" id=\"add-entry\"></div>"
+        },
+        {
+          "type": "text",
+          "content": "Кроки підключення функціоналу: <ul><li>Підключення компоненту до RegistryLayoutScheme.js: <code>layout: [\"AddEntry\", \"EntriesList\", \"EditEntry\"]</code></li><li>Підключення імпортів у компоненті: <code>import {AddEntry} from \"../entry/AddEntry.js\";\nimport {EntriesList} from \"../entry/EntriesList.js\";\nimport {EditEntry} from \"../entry/EditEntry.js\";</code</li><li>Монтування компоненту у контейнер: <code>const addEntryContainer = document.getElementById(\"add-entry\");\n        if (addEntryContainer) {\n            AddEntry.mount();\n        }\n        const entriesListContainer = document.getElementById(\"entries-list\");\n        if (entriesListContainer) {\n            EntriesList.mount();\n        }\n        const editEntryContainer = document.getElementById(\"edit-entry\");\n        if (editEntryContainer) {\n            EditEntry.mount();\n        }</code></li><li>Для зьереження запису у localStorage: <code>const STORAGE_KEY = \"notes\";\n\n        SceneDispatcher.subscribe(\"add-entry/save\", payload => {\n            const notes = dispatcher.get(STORAGE_KEY) || [];\n\n            const newEntry = typeof payload === \"string\"\n                ? {id: Date.now(), text: payload, timestamp: new Date().toISOString()}\n                : {\n                    id: Date.now(),\n                    text: payload.text,\n                    timestamp: new Date().toISOString()\n                };\n\n            const updatedNotes = [...notes, newEntry];\n\n            console.log(\"[Debug] Notes before saving:\", updatedNotes);\n\n            localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedNotes));\n            dispatcher.set(STORAGE_KEY, updatedNotes);\n        });</code></li><li>Додавання форми у шаблон: <code>< div class=\"row\">< div class=\"col-xl-10\">< section id=\"add-entry\">< /section>< div class=\"col-xl-6\">< div class=\"row\"><div class=\"col-xl-10\">< section id=\"edit-entry\">< /section>< /div>< div class=\"col-xl-2\" style=\"display: none\">< ul id=\"entries-list\">< /ul>< /div>< /div><section id=\"edit-entry\">< /section></code></li><li></li></ul>"
+        }
+      ],
+      "MessagesAgent": [
+        {
+          "type": "text",
+          "content": "<b>DUI</b>, як фреймворк для створення динамічних шаблонів, надає можливість задіювати чи не одну з найголовніших служб, що дозволяє повідомляти користувача про будь-які події."
+        },
+        {
+          "type": "text",
+          "content": "Якщо використовувати показ повідомлень тільки для оновлення записів у localStorage, то достатньо просто викликати у потрібному місці шаблону відповідний контейнер: <code>< div id=\"horizon-messages\">< /div></code>. Усе інше зробить <b>DUI</b>."
+        },
+        {
+          "type": "text",
+          "content": "Якщо необхідно використати <b>messages</b> за потрібної ситуації, тоді необхідно:<ul><li>імпортувати хелпер до компоненту: <code>import {useMessages} from \"../../core/helpers/useMessages.js\";</code></li><li>Створити екземпляр класу MessagesAgent через хелпер useMassages<code>const messages = useMessages();\n            messages.success(\"saved\");</code></li></ul>"
+        },
+        {
+          "type": "text",
+          "content": "Доступні такі типи повідомлень:<ul><li>success</li><li>info</li><li>warning</li><li>error</li></ul>"
+        }
+      ]
+    },
+    "Збереження даних у localStorage": {
+      "Додавання":  [
+        {
+          "type": "text",
+          "content": "<b>Dispatcher</b> дозволяє взаємодіяти із <b>localStorage</b> у реальному часі, що втілює базові концепції реактивності."
+        },
+        {
+          "type": "text",
+          "content": "Для реалізації додавання даних у <b>localStorage</b>, необхідно звернутися до методу <b>set</b>, попередньо імпортувавши хелпер <b>useDispatcher</b> до компоненту:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../../core/helpers/renderTemplate.js\";\nimport {dispatcher} from \"../../core/helpers/useDispatcher.js\";\n\nexport const ShowEntry = {\n    template: `\n        <ul id=\"notes-list\"></ul>\n    `,\n    mount(config = {}) {},\n    onMount() {\n        const list = document.getElementById(\"notes-list\");\n\n        const STORAGE_KEY = \"notes\";\n\n        dispatcher.subscribe(STORAGE_KEY, (entries) => {\n            list.innerHTML = \"\";\n            if (!Array.isArray(entries)) return;\n        });\n\n        dispatcher.hydrate(STORAGE_KEY);\n\n        dispatcher.subscribe(\"notes\", entries => {\n            EntriesList.onMount({\n                entries,\n                mode: \"readonly\",\n            });\n        });\n    },\n}"
+        },
+        {
+          "type": "text",
+          "content": "Шаблон має містити контейнер <code><section id=\"show-entry\"></section></code>, як точку монтування зчитаних даних"
+        },
+        {
+          "type": "text",
+          "content": "Шаблон має містити контейнер <code><section id=\"show-entry\"></section></code>, як точку монтування зчитаних даних"
+        }
+      ],
+      "Зчитування": [
+        {
+          "type": "text",
+          "content": "Зчитування даних з <b>localStorage</b> відбуваються шляхом використання методів <code>subscribe</code> та <code>hydrate</code> хелперу <b>useDispatcher</b>."
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../../core/helpers/renderTemplate.js\";\nimport {dispatcher} from \"../../core/helpers/useDispatcher.js\";\n\nexport const ShowEntry = {\n    template: `\n        < ul id=\"notes-list\">< /ul>\n    `,\n    mount(config = {}) {\n        const container = document.getElementById(\"show-entry\");\n\n        if (!container) {\n            console.warn(\"[ShowEntry] Container #show-entry not found - component not mounted.\");\n            return;\n        }\n\n        container.innerHTML = renderTemplate(this.template, config);\n        this.onMount();\n    },\n    onMount() {\n        const list = document.getElementById(\"notes-list\");\n\n        const STORAGE_KEY = \"notes\";\n\n        dispatcher.subscribe(STORAGE_KEY, (entries) => {\n            list.innerHTML = \"\";\n            if (!Array.isArray(entries)) return;\n        });\n\n        dispatcher.hydrate(STORAGE_KEY);\n\n        dispatcher.subscribe(\"notes\", entries => {\n            EntriesList.onMount({\n                entries,\n                mode: \"readonly\",\n            });\n        });\n    },\n}"
+        },
+        {
+          "type": "text",
+          "content": "Шаблон має містити контейнер <code>< section id=\"show-entry\">< /section></code>, як точку монтування для відображення завантажених даних."
+        }
+      ],
+      "Оновлення": [
+        {
+          "type": "text",
+          "content": "Оновлення даних з <b>localStorage</b> відбуваються шляхом використання методу <code>subscribe</code> хелперу <b>useDispatcher</b>."
+        },
+        {
+          "type": "text",
+          "content": "Нижче буде розглянуте <b>редагування</b> запису у <b>localStorage</b> . Спершу необхідно створити відповідну кнопку з редагування запису:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../../core/helpers/renderTemplate.js\";\n\nexport const EntriesList = {\n    template: ``,\n    mount(config = {}) {\n        const container = document.getElementById(\"entries-list\");\n\n        if (!container) {\n            console.warn(\"[EntriesList] #entries-list not found during mount.\");\n            return;\n        }\n\n        container.innerHTML = renderTemplate(this.template, config);\n\n        this.onMount(config);\n    },\n    onMount({entries = [], mode, onEdit = () => {\n        }\n            }) {\n        const ul = document.getElementById(\"entries-list\");\n\n        if (!ul) {\n            console.warn(\"[EntriesList] #entries-list not found during onMount.\");\n            return;\n        }\n\n        ul.innerHTML = \"\";\n\n        entries.forEach(entry => {\n            if (!entry || !entry.text) return;\n\n            const li = document.createElement(\"li\");\n            li.textContent = entry.text;\n\n            if (mode === \"editable\") {\n                const editBtn = document.createElement(\"button\");\n                editBtn.textContent = \"✏️\";\n                editBtn.onclick = () => onEdit(entry.id);\n\n                li.appendChild(editBtn);\n            }\n\n            ul.appendChild(li);\n        });\n    }\n};\n"
+        },
+        {
+          "type": "text",
+          "content": "Наступним кнопок стане створення компоненту із логікою, що використовує компонент із кнопкою редагування, для оновлення запису у <b>localStorage</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../../core/helpers/renderTemplate.js\";\nimport {dispatcher} from \"../../core/helpers/useDispatcher.js\";\nimport {EntriesList} from \"./EntriesList.js\";\n\nexport const EditEntry = {\n    template: ``,\n    mount(config = {}) {\n        const container = document.getElementById(\"edit-entry\");\n\n        if (!container) {\n            console.warn(\"[EditEntry] Container #edit-entry not found - component not mounted.\");\n            return;\n        }\n\n        container.innerHTML = renderTemplate(this.template, config);\n        this.onMount();\n    },\n    onMount() {\n        const button = document.getElementById(\"submit-entry\");\n        const input = document.getElementById(\"entry-text\");\n        const list = document.getElementById(\"edit-entry\");\n\n        const STORAGE_KEY = \"notes\";\n\n        button.addEventListener(\"click\", () => {\n            const value = input.value.trim();\n            if (!value) return;\n            const existing = dispatcher.get(STORAGE_KEY) || [];\n\n            const newEntry = {\n                id: Date.now(),\n                text: value,\n                timestamp: new Date().toISOString()\n            };\n\n            dispatcher.set(STORAGE_KEY, [...existing, newEntry]);\n            input.value = \"\";\n        });\n\n        dispatcher.subscribe(STORAGE_KEY, (entries) => {\n            list.innerHTML = \"\";\n            if (!Array.isArray(entries)) return;\n\n            entries.forEach((entry) => {\n                const li = document.createElement(\"li\");\n\n                const span = document.createElement(\"span\");\n                span.textContent = entry.text;\n\n                const editBtn = document.createElement(\"button\");\n                editBtn.textContent = \"✏️\";\n                editBtn.addEventListener(\"click\", () => {\n                    const newText = prompt(\"Редагувати запис:\", entry.text);\n                    if (newText !== null) {\n                        const updated = entries.map(e => e.id === entry.id ? {...e, text: newText} : e);\n                        dispatcher.set(STORAGE_KEY, updated);\n                    }\n                });\n\n                li.appendChild(span);\n                li.appendChild(editBtn);\n                list.appendChild(li);\n            });\n        });\n\n        const promptEdit = (id) => {\n            const notes = dispatcher.get(\"notes\") || [];\n            const entry = notes.find(e => e.id === id);\n            const newText = prompt(\"Редагувати запис:\", entry?.text);\n            if (newText !== null && entry) {\n                const updated = notes.map(e => e.id === id ? {...e, text: newText} : e);\n                dispatcher.set(\"notes\", updated);\n            }\n        };\n\n        dispatcher.hydrate(STORAGE_KEY);\n\n        let currentMode = \"readonly\";\n\n        dispatcher.subscribe(\"notes\", entries => {\n            if (currentMode === \"readonly\") {\n                EntriesList.onMount({entries, mode: \"readonly\"});\n            } else if (currentMode === \"editable\") {\n                EntriesList.mount({\n                    entries,\n                    mode: \"editable\",\n                    onEdit: promptEdit,\n                    onDelete: deleteEntry\n                });\n            }\n        });\n\n    }\n}"
+        }
+      ],
+      "Видалення": [
+        {
+          "type": "text",
+          "content": "Видалення даних з <b>localStorage</b> відбуваються шляхом використання методу <code>subscribe</code> хелперу <b>useDispatcher</b>. "
+        },
+        {
+          "type": "text",
+          "content": "Нижче буде розглянуте <b>видалення</b> запису у <b>localStorage</b> . Спершу необхідно створити відповідну кнопку з видалення запису:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../../core/helpers/renderTemplate.js\";\n\nexport const EntriesList = {\n    template: ``,\n    mount(config = {}) {\n        const container = document.getElementById(\"entries-list\");\n\n        if (!container) {\n            console.warn(\"[EntriesList] #entries-list not found during mount.\");\n            return;\n        }\n\n        container.innerHTML = renderTemplate(this.template, config);\n\n        this.onMount(config);\n    },\n    onMount({entries = [], mode, onEdit = () => {\n        }, onDelete = () => {\n        }\n            }) {\n        const ul = document.getElementById(\"entries-list\");\n\n        if (!ul) {\n            console.warn(\"[EntriesList] #entries-list not found during onMount.\");\n            return;\n        }\n\n        ul.innerHTML = \"\";\n\n        entries.forEach(entry => {\n            if (!entry || !entry.text) return;\n\n            const li = document.createElement(\"li\");\n            li.textContent = entry.text;\n\n            if (mode === \"editable\") {\n                const delBtn = document.createElement(\"button\");\n                delBtn.textContent = \"\uD83D\uDDD1️\";\n                delBtn.onclick = () => onDelete(entry.id);\n                \n                li.appendChild(delBtn);\n            }\n\n            ul.appendChild(li);\n        });\n    }\n};\n"
+        },
+        {
+          "type": "text",
+          "content": "Наступним кнопок стане створення компоненту із логікою, що використовує компонент із кнопкою видалення обраного запису з <b>localStorage</b>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../../core/helpers/renderTemplate.js\";\nimport {dispatcher} from \"../../core/helpers/useDispatcher.js\";\nimport {EntriesList} from \"./EntriesList.js\";\n\nexport const EditEntry = {\n    template: ``,\n    mount(config = {}) {\n        const container = document.getElementById(\"edit-entry\");\n\n        if (!container) {\n            console.warn(\"[EditEntry] Container #edit-entry not found - component not mounted.\");\n            return;\n        }\n\n        container.innerHTML = renderTemplate(this.template, config);\n        this.onMount();\n    },\n    onMount() {\n        const button = document.getElementById(\"submit-entry\");\n        const input = document.getElementById(\"entry-text\");\n        const list = document.getElementById(\"edit-entry\");\n\n        const STORAGE_KEY = \"notes\";\n\n        button.addEventListener(\"click\", () => {\n            const value = input.value.trim();\n            if (!value) return;\n            const existing = dispatcher.get(STORAGE_KEY) || [];\n\n            const newEntry = {\n                id: Date.now(),\n                text: value,\n                timestamp: new Date().toISOString()\n            };\n\n            dispatcher.set(STORAGE_KEY, [...existing, newEntry]);\n            input.value = \"\";\n        });\n\n        dispatcher.subscribe(STORAGE_KEY, (entries) => {\n            list.innerHTML = \"\";\n            if (!Array.isArray(entries)) return;\n\n            entries.forEach((entry) => {\n                const li = document.createElement(\"li\");\n\n                const span = document.createElement(\"span\");\n                span.textContent = entry.text;\n\n                const deleteBtn = document.createElement(\"button\");\n                deleteBtn.textContent = \"\uD83D\uDDD1️\";\n                deleteBtn.addEventListener(\"click\", () => {\n                    const filtered = entries.filter(e => e.id !== entry.id);\n                    dispatcher.set(STORAGE_KEY, filtered);\n                });\n\n                li.appendChild(span);\n                li.appendChild(deleteBtn);\n                list.appendChild(li);\n            });\n        });\n\n        const promptEdit = (id) => {\n            const notes = dispatcher.get(\"notes\") || [];\n            const entry = notes.find(e => e.id === id);\n            const newText = prompt(\"Редагувати запис:\", entry?.text);\n            if (newText !== null && entry) {\n                const updated = notes.map(e => e.id === id ? {...e, text: newText} : e);\n                dispatcher.set(\"notes\", updated);\n            }\n        };\n\n        const deleteEntry = (id) => {\n            const notes = dispatcher.get(\"notes\") || [];\n            const filtered = notes.filter(e => e.id !== id);\n            dispatcher.set(\"notes\", filtered);\n        };\n\n        dispatcher.hydrate(STORAGE_KEY);\n\n        let currentMode = \"readonly\";\n\n        dispatcher.subscribe(\"notes\", entries => {\n            if (currentMode === \"readonly\") {\n                EntriesList.onMount({entries, mode: \"readonly\"});\n            } else if (currentMode === \"editable\") {\n                EntriesList.mount({\n                    entries,\n                    mode: \"editable\",\n                    onEdit: promptEdit,\n                    onDelete: deleteEntry\n                });\n            }\n        });\n\n    }\n}"
+        }
+      ]
+    },
+    "Хелпери": {
+      "renderTemplate": [
+        {
+          "type": "text",
+          "content": "<b>renderTemplate</b> є допоміжним компонентом, що у межах DUI, належить до категорії <b>helpers</b>. Даний хелпер дозволяє налаштовувати вивід даних на екран у <b>декларативному</b> стилі. Декларативний стиль, передбачає використання логіки у сцені чи то компоненті до неї. Це надає гнучкості у керуванні потоком даних у шаблоні, у котрому створюється блок коду <code>template = ``</code>, де дані додаються та змінюються ще до його монтування у контейнер за допомогою <b>innerHTML</b>. Уникнення безпосередньої ініціалізації контенту через <code>container.innerHTML = `...сode...`;</code> значно полегшує цю процедуру."
+        },
+        {
+          "type": "text",
+          "content": "Шаблон у <b>декларативному</b> стилі має наступний вигляд:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../core/helpers/renderTemplate.js\";\n\nexport const WelcomeScene = {\n    template: `\n        ...Code...\n    `,\n    mount(config = {}) {\n        const container = document.getElementById(\"welcome-block\");\n\n        if (!container) {\n            console.warn(\"[WelcomeScene] Container #welcome-block not found - component not mounted.\");\n            return;\n        }\n\n        container.innerHTML = renderTemplate(this.template, config);\n\n        if (typeof this.onMount === \"function\") {\n            this.onMount();\n        }\n    },\n    onMount() {}\n}"
+        },
+        {
+          "type": "text",
+          "content": "Попередньо імпортований <b>renderTemplate</b> приймає рядок з кодом та за допомогою <code>replace()</code> проходить по всіх входженнях у ньому - <code>{...}</code>, і замінює їх на відповідні значення з <code>config</code>. <code>config</code> приходить у компонент, в якості параметрі <code>mount(config = {}) {}</code> з <b>RegistryLayoutScheme.js</b>, якщо відповідні дані там були зазначені, а також, якщо ці дані буди попередньо створені у межах <code>mount(config = {}) {}</code> та <code>onMount() {}</code>. На прикладі це виглядає наступним чином:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {renderTemplate} from \"../core/helpers/renderTemplate.js\";\n\nexport const WelcomeScene = {\n    template: `< div class=\"container-fluid d-flex align-items-center\" style=\"height: 95vh\">\n                    < div class=\"row justify-content-center\">\n                        < div class=\"col-xxl-4 col-xl-6 col-lg-10 text-center mt-5 mb-4\">\n                            < p class=\"col-xl-5 display-6\">Welcome</p>\n                            < div>\n                                < p class=\"text-gradient text-info mb-3 display-4\">{title}< /p>\n                                < p class=\"col-xl-10 lead mx-auto text-end\">Let`s go improvise on your stage< /p>\n                            < /div>\n                        < /div>\n                        < div class=\"row justify-content-center\">\n                            < div class=\"card col-xxl-4 col-xl-6 bg-soft-ui p-2 text-center\">\n                                < h5>It is a JavaScript framework to develop static templates and websites for static hosting like GitHub or Netlify, with dynamic functionality, without Node.js< /h5>\n                            < /div>\n                        < /div>\n                        < div class=\"row justify-content-center mt-5 mb-4\">\n                            < div class=\"col-xl-6 text-center\">\n                                < p>\n                                    < span class=\"lead\">The philosophy: </span>\n                                    < span class=\"text-secondary\">{subtitle}.< /span>\n                                < /p>\n                                < p class=\"lead\">{tagline}< /p>\n        \n                                {CTA_button}\n                            < /div>\n                        < /div>\n                    < /div>\n                < /div>`,\n    mount(config = {}) {\n        const container = document.getElementById(\"welcome-block\");\n\n        if (!container) {\n            console.warn(\"[WelcomeScene] Container #welcome-block not found - component not mounted.\");\n            return;\n        }\n\n        const {title, subtitle, version, tagline, CTA} = config;\n\n        const CTA_label = config.CTA?.label || \"Explore\";\n        const CTA_link = config.CTA?.link?.trim() ? config.CTA.link : \"#page404\";\n\n        const processedConfig = {\n            ...config,\n            CTA_button: `< a href=\"${CTA_link}\" class=\"btn bg-gradient-info mt-3 fs-6\">\n                 ${CTA_label}\n                 < span class=\"badge\">${config.version}< /span>\n               < /a>`\n        };\n\n\n        container.innerHTML = renderTemplate(this.template, processedConfig);\n\n        if (typeof this.onMount === \"function\") {\n            this.onMount();\n        }\n    },\n\n    onMount() {...}\n}"
+        },
+        {
+          "type": "text",
+          "content": "<code>mount(config = {}) {}</code> отримав частину даних з <b>RegistryLayoutScheme.js</b> та ще частину згенерував, з'єднавши отримані дані із новими у <code>processedConfig</code>, що й було передано для обробки через <b>renderTemplate.js</b> та монтування у контейнер <code>welcome-block</code>."
+        },
+        {
+          "type": "text",
+          "content": "Подібні маніпуляції із кодом вимагають наявність ідеї <b>renderTemplate.js</b> у <b>DUI</b> та <b>декларативного</b> стилю програмування. Логіка має бути відокремлена від представлення, а шаблон — гнучким, безпечним і легко масштабованим. <b>Імперативний</b> стиль не надає подібної гнучкості. Шаблон прийдеться перемальовувати щоразу, коли відбуваються зміни. Негативний вплив <b>Імперативного</b> стилю програмування у реалізації динамічного коду, можна структурувати наступним чином:<ul><li>Дані вже \"зашиті\" в шаблон — їх не можна змінити без повного перегенерування рядка.</li><li>Немає можливості централізовано керувати логікою підстановки (наприклад, fallback-значення (значення за замовченням, якщо не \"прийшли\" інші), умовні блоки, динамічні компоненти)</li><li>Використовувати плейсхолдери {key} — доводиться вручну конкатенувати рядки.</li><li>Розділити шаблон і логіку — все змішується в одному великому рядку.</li><li>Якщо ти вставляєш дані напряму в innerHTML, без обробки, то дані можуть містити шкідливий код (наприклад, <code>script</code>)</li></ul>"
+        }
+      ],
+      "useAssets": [
+        {
+          "type": "text",
+          "content": "Хелпер <b>useAssets</b> дозволяє використовувати у сценах ізольованих (<code>scoped</code>) стилів та скриптів. Це дозволяє додавати кожній окремій сцені свої унікальні <b>CSS</b>-стилі та <b>JS</b>-скрипти, які будуть доступні лише у межах конкретної сцени. Додатковий імпорт даного хелперу не потрібний. Усі налаштування проводяться з <b>RegistryLayoutScheme.js</b> у відповідних блоках коду <code>linkHref</code> та <code>scriptSrc</code>:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "guide: {\n        primary_structure: ``,\n        layout: [],\n        config: {},\n        linkHref: [\"https://unpkg.com/prismjs/themes/prism.css\"],\n        scriptSrc: [\"https://unpkg.com/prismjs/prism.js\", \"https://unpkg.com/prismjs/components/prism-javascript.min.js\"],\n    },"
+        },
+        {
+          "type": "text",
+          "content": "Додавати значення обох масивів можливо списком, якщо файлів стилів чи скриптів є декілька."
+        }
+      ],
+      "useCTA": [
+        {
+          "type": "text",
+          "content": "Використання useCTA() хелпера дозволяє генерувати посилання чи кнопку, на вибір, задаючи відповідний параметр. Додаткові параметри дозволяють передавати у кнопку чи посилання конкретні значення. Виклик кнопки у <b>mount() {}</b> виглядає наступним чином:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "useCTA({ label: \"Дізнатися більше\", link: \"/pricing\" }, \"v1.2\", {\n  className: \"btn btn-info\",\n  target: \"_blank\",\n  title: \"Перейти на сторінку\"\n});"
+        },
+        {
+          "type": "text",
+          "content": "або"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "useCTA({ label: \"Натисни мене\" }, \"v1.2\", {\n  elementType: \"button\",\n  className: \"btn btn-success\",\n  onClick: () => showModal()\n});"
+        },
+        {
+          "type": "text",
+          "content": "Генерування кнопки за допомогою <b>useCTA</b> створює умови для додавання їй інтерактивності. Згенерований елемент приймає події, ним можна гнучко керувати, що повністю відповідає декларативному стилю написання коду в <b>Horizon Dynamic UI</b> та принципам використання <b>renderTemplate</b>."
+        },
+        {
+          "type": "text",
+          "content": "Кнопка додається у шаблон, як дочірній елемент: <code>document.getElementById(\"cta-container\").appendChild(button);</code>."
+        },
+        {
+          "type": "text",
+          "content": "Згенерована кнопка приймає наступні параметри:<ul><li><code>elementType = href ? \"a\" : \"button\"</code></li><li><code>target</code></li><li><code>className</code></li><li><code>id</code></li><li><code>rel</code></li><li><code>ariaLabel</code></li><li><code>title</code></li><li><code>onClick</code></li></ul>"
+        },
+        {
+          "type": "text",
+          "content": "Попередньо, хелпер має бути імпортований у компонент: <code>import {use_cta} from \"../core/helpers/useCTA.js\";</code>"
+        }
+      ],
+      "useDispatcher": [
+        {
+          "type": "text",
+          "content": "<b>useDispatcher</b> — це реактивний хелпер, що реалізує <b>локальну систему керування станом</b> на основі <b>localStorage</b>. Він дозволяє <b>зберігати, читати, оновлювати та транслювати дані</b> між компонентами <b>Horizon Dynamic UI</b> без використання зовнішніх бібліотек типу <b>Redux</b> чи <b>Vuex</b>."
+        },
+        {
+          "type": "text",
+          "content": "Це простий, у даній редакції, декларативний механізм, який поєднує збереження даних у браузері із реактивною логікою — тобто, зміна значення автоматично викликає відповідні підписки."
+        },
+        {
+          "type": "text",
+          "content": "Основні методи <b>useDispatcher</b>:"
+        },
+        {
+          "type": "text",
+          "content": "<table class=\"table\">\n  <thead>\n    <tr>\n      <th scope=\"col\">Метод</th>\n      <th scope=\"col\">Опис</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th scope=\"row\"><b>set(key, value)</b></th>\n      <td>Зберігає значення у <b>localStorage</b> та викликає <b>emit()</b></td>\n    </tr>\n    <tr>\n      <th scope=\"row\"><b>get(key)</b></th>\n      <td>Зчитує значення з <b>localStorage</b></td>\n    </tr>\n    <tr>\n      <th scope=\"row\"><b>clear(key)</b></th>\n      <td>Видаляє значення з <b>localStorage</b> та викликає <b>emit()</b></td>\n    </tr>\n    <tr>\n      <th scope=\"row\"><b>subscribe(key, callback)</b></th>\n      <td>Реєструє функцію, яка буде викликана при зміні значення</td>\n    </tr>\n    <tr>\n      <th scope=\"row\"><b>unsubscribe(key, callback)</b></th>\n      <td>Видаляє підписку</td>\n    </tr>\n    <tr>\n      <th scope=\"row\"><b>emit(key, value)</b></th>\n      <td>Викликає всі підписки для ключа з новим значенням</td>\n    </tr>\n    <tr>\n      <th scope=\"row\"><b>hydrate(key)</b></th>\n      <td>Ініціалізує підписки поточним значенням з <b>localStorage</b></td>\n    </tr>\n  </tbody>\n</table>"
+        },
+        {
+          "type": "text",
+          "content": "Приклад використання:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import { dispatcher } from \"../core/helpers/useDispatcher.js\";\n\ndispatcher.subscribe(\"user\", (data) => {\n  console.log(\"User data changed:\", data);\n});\n\ndispatcher.set(\"user\", { name: \"Євгеній\", role: \"admin\" });\n// → автоматично викликає підписку\n\ndispatcher.clear(\"user\");\n// → підписка отримає null\n"
+        },
+        {
+          "type": "text",
+          "content": "<b>useDispatcher</b> — це локальний реактивний вузол, який дозволяє компонентам Horizon зберігати стан без серверної залежності, реагувати на зміни без ручного оновлення <b>DOM</b>, будувати логіку взаємодії між сценами та компонентами. Цей механізм синхронізації дозволяє створювати та зберігати декларативність і контроль в межах динамічного інтерфейсу, які й покликаний створювати <b>Horizon Dynamic UI</b>."
+        }
+      ],
+      "useMessages": [
+        {
+          "type": "text",
+          "content": "Хелпер <b>useMessages</b> посилається на агент виводу повідомлень - <b>MessagesAgent</b>. Логіка використання полягає у імпортуванні хелперу до компоненту:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "import {useMessages} from \"../../core/helpers/useMessages.js\";"
+        },
+        {
+          "type": "text",
+          "content": "І з подальшим викликом кнопки із виводом потрібного повідомлення на екран:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "const messages = useMessages(); messages.success(\"saved\");"
+        },
+        {
+          "type": "text",
+          "content": "Доступні такі типи повідомлень:<ul><li>success</li><li>info</li><li>warning</li><li>error</li></ul>"
+        }
+      ],
+      "useRouting": [
+        {
+          "type": "text",
+          "content": "Хеш-посилання є найпростішим методом адресування усередині <b>Horizon Dynamic UI</b> між його частинами. Для використання таких посилань, достатньо створити відповідний роут у <code>router -> index.js</code>. Наприклад:"
+        },
+        {
+          "type": "code",
+          "language": "js",
+          "content": "export function init(app) {\n    app.routing.add(\"page_404\", () => {\n        app.sceneManager.mountScene(\"page_404\");\n    });\n    Інший код...\n}"
+        },
+        {
+          "type": "text",
+          "content": "У шаблоні використати тег <b>a</b>: <code>< a href=\"#page_404\">Page 404< /a></code>"
+        }
+      ]
+    }
+  }
+}

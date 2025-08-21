@@ -1,0 +1,9 @@
+// scss-guide-start clearfix
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+// scss-guide-end clearfix
