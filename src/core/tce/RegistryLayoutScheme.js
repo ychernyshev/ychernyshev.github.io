@@ -45,7 +45,7 @@ export const RegistryLayoutScheme = {
                 }
             },
         },
-        linkHref: ["https://unpkg.com/prismjs/themes/prism.css"],
-        scriptSrc: ["https://unpkg.com/prismjs/prism.js", "https://unpkg.com/prismjs/components/prism-javascript.min.js"],
+        linkHref: [],
+        scriptSrc: [],
     }
 }
