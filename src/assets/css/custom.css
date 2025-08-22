@@ -1,18 +1,62 @@
 .max-height {
-  height: 85vh;
+    height: 85vh;
 }
 
 .d-block {
-  display: block;
+    display: block;
 }
 
 .text-decoration-none {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 hr {
-  background: lightgray;
+    background: lightgray;
 }
 
+.triangle-button {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-top: 60px solid #404A55;
+    background: none;
+    cursor: pointer;
+}
 
+.triangle-text {
+    position: absolute;
+    top: -60px;
+    left: -40px;
+    width: 80px;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    pointer-events: none;
+}
+
+.collapsed-content {
+    position: absolute;
+    top: 17%;
+    width: 80%;
+    right: 10%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    padding-top: 20px;
+}
+
+.collapsed-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 30px); /* вирівнювання по центру */
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 60px solid #404A55; /* колір фону блоку */
+}
 

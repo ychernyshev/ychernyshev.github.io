@@ -1,7 +1,9 @@
 import {renderTemplate} from "../core/helpers/renderTemplate.js";
 
 export const WelcomeScene = {
-    template: ``,
+    template: `
+        <section id="top-nav"></section>
+    `,
     mount(config = {}) {
         const container = document.getElementById("welcome-block");
 
