@@ -3,6 +3,10 @@ import {renderTemplate} from "../core/helpers/renderTemplate.js";
 export const WelcomeScene = {
     template: `
         <section id="top-nav"></section>
+        <section 
+            style="background: linear-gradient(#404a55, #0e1014);" 
+            class="col-xxl-12 text-light" 
+            id="intro-section"></section>
     `,
     mount(config = {}) {
         const container = document.getElementById("welcome-block");

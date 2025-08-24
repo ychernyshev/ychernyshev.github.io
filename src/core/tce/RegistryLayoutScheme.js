@@ -13,7 +13,7 @@ export const RegistryLayoutScheme = {
                 </main>
             `,
         layout: [
-            "WelcomeView", "TopNav", "CV",
+            "WelcomeView", "TopNav", "CV", "IntroSection",
         ],
         config: {
             WelcomeView: {

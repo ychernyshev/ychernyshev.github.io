@@ -4,7 +4,8 @@ import { WelcomeScene } from "../../pages/WelcomeScene.js";
 
 // Components
 import {TopNav} from "../../components/inc/TopNav.js";
-import {CV} from "../../components/inc/cv.js";
+import {CV} from "../../components/cv.js";
+import {IntroSection} from "../../components/IntroSection.js";
 
 export class LayoutRegistryComponents {
     static
@@ -15,5 +16,6 @@ export class LayoutRegistryComponents {
         // componentName
         TopNav,
         CV,
+        IntroSection,
     });
 }
