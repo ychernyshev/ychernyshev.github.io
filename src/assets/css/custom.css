@@ -60,3 +60,11 @@ hr {
   border-top: 60px solid #404A55; /* колір фону блоку */
 }
 
+/*Font*/
+. fw-500 {
+    font-weight: 500;
+}
+
+. fw-400 {
+    font-weight: 400;
+}
