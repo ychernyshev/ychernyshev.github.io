@@ -15,7 +15,6 @@ export class LayoutRegistryComponents {
         WelcomeView: WelcomeScene,
         // componentName
         TopNav,
-        CV,
         IntroSection,
     });
 }
