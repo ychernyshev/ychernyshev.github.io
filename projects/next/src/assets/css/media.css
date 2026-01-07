@@ -1,0 +1,101 @@
+@media only screen and (max-width: 1920px) {
+    .media-paddings {
+        padding: 1rem;
+    }
+
+    .media-width {
+        width: 75%;
+    }
+
+    .media-socials {
+        width: 36px;
+        height: 36px;
+    }
+
+    .persona-image-styles {
+        width: 10rem;
+        border-radius: 50% 50%
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .media-width {
+        width: 100%;
+    }
+
+    .persona-font-size {
+        font-size: 3.5rem;
+    }
+
+    .persona-image-styles {
+        /*background-image: url("https://scontent.flwo4-2.fna.fbcdn.net/v/t1.6435-9/60136309_2413951381969303_3156094242871312384_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=174925&_nc_ohc=Sre0SXdnofwAX_wZsfd&_nc_ht=scontent.flwo4-2.fna&oh=00_AfDr6-VmpJucOT4m0k7UjiYd6iZRxM0qnVmRISBBxZmHrw&oe=65143D30");*/
+        width: 30rem;
+        border-radius: 50% 50%
+    }
+
+    .navbar {
+        font-size: 3.5rem;
+    }
+
+    .nav-item a {
+        display: block;
+        text-align: center;
+    }
+
+    .title-text {
+        font-size: 2.3rem;
+    }
+
+    .regular-text {
+        font-size: 2.2rem;
+    }
+
+    .card-text {
+        font-size: 2.2rem;
+    }
+
+    .list-font-size {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        font-size: 2.2rem;
+    }
+
+    .media-text-center {
+        text-align: center;
+    }
+
+    .media-paddings {
+        padding: .4rem;
+    }
+
+    .media-socials {
+        width: 55px;
+        height: 55px;
+    }
+
+    .media-mt-2 {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .persona {
+        text-align: center;
+        font-size: 4.5rem;
+    }
+
+    .title-text {
+        font-size: 3rem;
+    }
+
+    .list-spacing {
+        width: 100%;
+    }
+
+    .list-font-size {
+        font-size: 1.8rem;
+    }
+}
+
