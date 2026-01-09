@@ -1,4 +1,3 @@
-
 export const IntroSection = {
     mount(config = {}) {
         const container = document.getElementById("example-main")
