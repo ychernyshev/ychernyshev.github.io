@@ -3,7 +3,7 @@ export const ContentMain = {
         const container = document.getElementById("content-main")
 
         if (!container) {
-            console.warn("[IntroSection] Container #content-main not found - component not mounted.");
+            console.warn("[ContentMain] Container #content-main not found - component not mounted.");
             return;
         }
 

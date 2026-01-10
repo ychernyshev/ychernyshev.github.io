@@ -3,7 +3,7 @@ export const ExamplesList = {
         const container = document.getElementById("example-main")
 
         if (!container) {
-            console.warn("[IntroSection] Container #example-main not found - component not mounted.");
+            console.warn("[ExamplesList] Container #example-main not found - component not mounted.");
             return;
         }
 

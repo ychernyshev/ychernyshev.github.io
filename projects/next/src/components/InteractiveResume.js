@@ -3,7 +3,7 @@ export const InteractiveResume = {
         const container = document.getElementById("interactive-resume")
 
         if (!container) {
-            console.warn("[IntroSection] Container #interactive-resume not found - component not mounted.");
+            console.warn("[InteractiveResume] Container #interactive-resume not found - component not mounted.");
             return;
         }
 
