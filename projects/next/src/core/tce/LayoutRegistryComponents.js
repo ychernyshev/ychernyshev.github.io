@@ -6,6 +6,9 @@ import { WelcomeScene } from "../../pages/WelcomeScene.js";
 import {TopNav} from "../../components/inc/TopNav.js";
 import {CV} from "../../components/cv.js";
 import {IntroSection} from "../../components/IntroSection.js";
+import {ContentMain} from "../../components/ContentMain.js";
+import {ExamplesList} from "../../components/ExamplesList.js";
+import {InteractiveResume} from "../../components/InteractiveResume.js";
 
 export class LayoutRegistryComponents {
     static
@@ -16,5 +19,8 @@ export class LayoutRegistryComponents {
         // componentName
         TopNav,
         IntroSection,
+        ContentMain,
+        ExamplesList,
+        InteractiveResume
     });
 }
