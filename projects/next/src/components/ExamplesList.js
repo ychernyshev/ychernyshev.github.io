@@ -8,8 +8,7 @@ export const ExamplesList = {
         }
 
         container.innerHTML = `
-            <div class="row justify-content-center">
-            </div>
+            
         `
     }
 }

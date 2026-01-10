@@ -7,6 +7,7 @@ export const WelcomeScene = {
             style="background: linear-gradient(#404a55, #0e1014);" 
             class="col-xxl-12 text-light" 
             id="intro-section"></section>
+        <section id="content-main"></section>
     `,
     mount(config = {}) {
         const container = document.getElementById("welcome-block");

@@ -8,9 +8,7 @@ export const InteractiveResume = {
         }
 
         container.innerHTML = `
-            <div class="col-xl-7">
             
-            </div>
         `
     }
 }
