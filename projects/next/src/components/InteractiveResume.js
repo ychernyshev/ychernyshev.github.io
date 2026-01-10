@@ -1,4 +1,4 @@
-export const IntroSection = {
+export const InteractiveResume = {
     mount(config = {}) {
         const container = document.getElementById("interactive-resume")
 

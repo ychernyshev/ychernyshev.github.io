@@ -1,4 +1,4 @@
-export const IntroSection = {
+export const ExamplesList = {
     mount(config = {}) {
         const container = document.getElementById("example-main")
 
