@@ -13,7 +13,7 @@ export const TopNav = {
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav mx-auto">
                         <li class="nav-item text-center w-100">
-                            <a class="nav-link color-dark nav-link-style active" href="index.html#introducing">Introducing</a>
+                            <a class="nav-link color-dark nav-link-style active font-weight-bolder" href="index.html#introducing">Introducing</a>
                         </li>
                     </ul>
                     <ul class="nav mx-auto">
