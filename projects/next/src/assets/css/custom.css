@@ -64,6 +64,10 @@ hr {
     background: #E6E7EE;
 }
 
+.bg-darker {
+    background: rgb(33, 37, 41);
+}
+
 /*Font*/
 . fw-500 {
     font-weight: 500;
