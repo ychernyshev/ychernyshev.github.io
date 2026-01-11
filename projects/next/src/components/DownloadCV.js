@@ -9,7 +9,7 @@ export const DownloadCV = {
 
         container.innerHTML = `
                 <div class="row" style="margin-top: 2rem;">
-                    <div class="col-lg-1" style="background: rgb(33, 37, 41)"></div>
+                    <div class="col-lg-1 bg-darker"></div>
                     <div class="col-lg-11 bg-warning">
                         <div class="row">
                             <div class="col-lg-1 col-sm-2 text-center my-auto">
@@ -23,14 +23,14 @@ export const DownloadCV = {
                                     </svg>
                                 </a>
                             </div>
-                            <div class="col-lg-10 col-sm-9 my-auto p-2" style="background: rgb(33, 37, 41)">
+                            <div class="col-lg-10 col-sm-9 my-auto p-2 bg-darker">
                                 <div class="text-center text-light">
                                     <h4 class="my-auto text-light">
                                         Python/JavaScript Developer
                                     </h4>
                                 </div>
                             </div>
-                            <div class="col-lg-1" style="background: rgb(33, 37, 41);"></div>
+                            <div class="col-lg-1 bg-darker"></div>
                         </div>
                     </div>
             </div>
