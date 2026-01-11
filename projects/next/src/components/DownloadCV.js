@@ -8,7 +8,6 @@ export const DownloadCV = {
         }
 
         container.innerHTML = `
-            <div className="row" style="margin-top: -2rem;">
                 <div className="col-lg-1 bg-dark"></div>
                 <div className="col-lg-11 bg-warning">
                     <div className="row">
@@ -29,7 +28,6 @@ export const DownloadCV = {
                         <div className="col-lg-1" style="background: rgb(33, 37, 41);"></div>
                     </div>
                 </div>
-            </div>
         `
     }
 }

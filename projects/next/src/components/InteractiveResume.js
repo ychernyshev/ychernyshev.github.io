@@ -8,7 +8,7 @@ export const InteractiveResume = {
         }
 
         container.innerHTML = `
-            
+            <div className="row" style="margin-top: -2rem;" id="download-cv"></div>
         `
     }
 }
