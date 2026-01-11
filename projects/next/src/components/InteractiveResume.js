@@ -9,7 +9,7 @@ export const InteractiveResume = {
 
         container.innerHTML = `
             <div class="row justify-content-center">
-                <div className="row" style="margin-top: -2rem;" id="download-cv"></div>
+                <div class="row" style="margin-top: -2rem;" id="download-cv"></div>
             </div>
         `
     }
