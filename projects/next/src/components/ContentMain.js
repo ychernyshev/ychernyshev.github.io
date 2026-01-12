@@ -11,7 +11,7 @@ export const ContentMain = {
             <div class="row justify-content-center">
                 <div class="col-xl-3" id="example-main"></div>
                 <div class="col-xl-7" id="interactive-resume"></div>
-                <div class="row justify-content-center" id="additional-skills"></div>
+                <div class="row justify-content-center bg-darker text-light" id="additional-skills"></div>
             </div>
         `
     }
