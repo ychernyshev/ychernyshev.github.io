@@ -38,3 +38,18 @@ All notable changes to this project will be documented in this file.
 - Warning message component names corrected
 - Author image symmetry in `IntroSection.js`
 
+--- 
+
+## [12.01.2026 0.6.0]
+
+### Added
+- `AdditionalSkills.js` component created
+- Registered `AdditionalSkills` component in layout registry
+
+### Changed
+- `ExamplesList.js`: minor alignment improvements
+- `ContentMain.js`: applied `bg-darker` and `text-light` CSS classes to the `AdditionalSkills` component
+- `AdditionalSkills.js`: updated section to correct appearance
+
+---
+
