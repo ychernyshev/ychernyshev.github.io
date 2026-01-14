@@ -53,3 +53,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+[14.01.2026 0.7.0]
+
+### Added
+- `WorkedScene.js` created as a future page for portfolio projects
+- `EducationScene.js` created as a future page with education information
+- `ContactsScene.js` created as a future page with contact details
+
+### Changed
+- Components for the `WelcomeScene` have been separated into their own folder `welcome`
+
+---
