@@ -4,13 +4,13 @@ import { WelcomeScene } from "../../pages/WelcomeScene.js";
 
 // Components
 import {TopNav} from "../../components/inc/TopNav.js";
-import {CV} from "../../components/cv.js";
-import {IntroSection} from "../../components/IntroSection.js";
-import {ContentMain} from "../../components/ContentMain.js";
-import {ExamplesList} from "../../components/ExamplesList.js";
-import {InteractiveResume} from "../../components/InteractiveResume.js";
-import {DownloadCV} from "../../components/DownloadCV.js";
-import {AdditionalSkills} from "../../components/AdditionalSkills.js";
+import {CV} from "../../components/welcome/cv.js";
+import {IntroSection} from "../../components/welcome/IntroSection.js";
+import {ContentMain} from "../../components/welcome/ContentMain.js";
+import {ExamplesList} from "../../components/welcome/ExamplesList.js";
+import {InteractiveResume} from "../../components/welcome/InteractiveResume.js";
+import {DownloadCV} from "../../components/welcome/DownloadCV.js";
+import {AdditionalSkills} from "../../components/welcome/AdditionalSkills.js";
 
 export class LayoutRegistryComponents {
     static
