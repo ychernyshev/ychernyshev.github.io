@@ -19,7 +19,7 @@ export const IntroSection = {
                         <p class="lead regular-text mt-3" style="font-size: 1.3rem;">
                             I like Django and Vue.js. Firstly I have used only Django for my projects, but I saw that I need in much comfortable and reactive frontend. So, I am using both of these technologies to realize my ideas. You can see the list of technologies that I am exploring:
                         </p>
-                        <div class="row justify-content-center" style="margin-top: -2rem;" id="download-cv"></div>
+                        <div class="row justify-content-center" id="download-cv"></div>
                     </div>
                 </div>
             </div>
