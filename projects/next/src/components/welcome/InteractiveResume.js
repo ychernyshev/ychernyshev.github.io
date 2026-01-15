@@ -9,7 +9,6 @@ export const InteractiveResume = {
 
         container.innerHTML = `
             <component id="main-skills"></component>
-            <div class="row justify-content-center" style="margin-top: -2rem;" id="download-cv"></div>
         `
     }
 }
