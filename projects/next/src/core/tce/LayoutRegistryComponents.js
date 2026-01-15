@@ -11,6 +11,7 @@ import {ExamplesList} from "../../components/welcome/ExamplesList.js";
 import {InteractiveResume} from "../../components/welcome/InteractiveResume.js";
 import {DownloadCV} from "../../components/welcome/DownloadCV.js";
 import {AdditionalSkills} from "../../components/welcome/AdditionalSkills.js";
+import {MainSkills} from "../../components/welcome/MainSkills.js";
 
 export class LayoutRegistryComponents {
     static
@@ -25,6 +26,7 @@ export class LayoutRegistryComponents {
         ExamplesList,
         InteractiveResume,
         DownloadCV,
-        AdditionalSkills
+        AdditionalSkills,
+        MainSkills
     });
 }

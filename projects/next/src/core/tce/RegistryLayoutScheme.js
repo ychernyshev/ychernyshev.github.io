@@ -21,7 +21,8 @@ export const RegistryLayoutScheme = {
             "ExamplesList",
             "InteractiveResume",
             "DownloadCV",
-            "AdditionalSkills"
+            "AdditionalSkills",
+            "MainSkills"
         ],
         config: {
             WelcomeView: {
