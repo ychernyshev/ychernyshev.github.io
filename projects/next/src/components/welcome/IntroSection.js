@@ -11,7 +11,7 @@ export const IntroSection = {
             <div class="container-fluid">
                 <div class="row justify-content-center" style="position: relative;">
                     <div class="col-xl-3 col-lg-8 col-sm-11 d-flex justify-content-center">
-                        <img src="https://raw.githubusercontent.com/ychernyshev/ychernyshev.github.io/main/assets/images/persona.jpg" width="78%" height="94%" alt="author">
+                        <img src="https://raw.githubusercontent.com/ychernyshev/ychernyshev.github.io/main/assets/images/persona.jpg" width="78%" height="100%" alt="author">
                     </div>
                     <div class="col-xl-7 col-lg-8 col-sm-11 mt-4 text-justify">
                         <h1 class="text-light fw-500">Welcome</h1>
