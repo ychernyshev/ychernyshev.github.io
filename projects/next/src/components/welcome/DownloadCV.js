@@ -23,11 +23,11 @@ export const DownloadCV = {
                                     </svg>
                                 </a>
                             </div>
-                            <div class="col-lg-10 col-sm-9 my-auto p-2 bg-darker">
+                            <div class="col-lg-10 col-sm-9 my-auto bg-darker">
                                 <div class="text-center text-light">
-                                    <h4 class="my-auto text-light">
+                                    <p class="my-auto text-light text-uppercase text-bold" style="font-size: 1.3rem; padding: .7rem">
                                         Python/JavaScript Developer
-                                    </h4>
+                                    </p>
                                 </div>
                             </div>
                             <div class="col-lg-1 bg-darker"></div>
