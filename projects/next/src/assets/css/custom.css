@@ -68,6 +68,14 @@ hr {
     background: rgb(33, 37, 41);
 }
 
+.bg-blue-gray {
+    background: #E9EEF6;
+}
+
+.right-angle {
+    border-radius: 0;
+}
+
 /*Font*/
 . fw-500 {
     font-weight: 500;
