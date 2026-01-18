@@ -9,6 +9,7 @@ export const InteractiveResume = {
 
         container.innerHTML = `
             <component id="main-skills"></component>
+            <component id="about-job-block"></component>
         `
     }
 }

@@ -22,7 +22,8 @@ export const RegistryLayoutScheme = {
             "InteractiveResume",
             "DownloadCV",
             "AdditionalSkills",
-            "MainSkills"
+            "MainSkills",
+            "AboutMeAndJobSections",
         ],
         config: {
             WelcomeView: {

@@ -1,16 +1,18 @@
-import {renderTemplate} from "../../core/helpers/renderTemplate.js";
-
 export const AboutMeAndJobSections = {
-    template: `
-        
-    `,
-    mount(config = {}) {
+    mount() {
         const container = document.getElementById("about-job-block");
 
         if (!container) {
             console.warn("[AboutMeAndJobSections] Container #about-job-block not found - component not mounted.");
             return;
         }
+
+        container.innerHTML = `
+            <div class="row">
+                <div id="about-job-blocks-col"></div>
+            </div>
+            <div id="about-job-blocks"></div>
+        `;
 
         const blocks = [
             {
@@ -24,17 +26,20 @@ export const AboutMeAndJobSections = {
         ]
 
         blocks.forEach((item, index) => {
+            const about_job_blocks_col = document.getElementById("about-job-blocks-col");
+            const about_job_blocks = document.getElementById("about-job-blocks");
+
             const d_inline_flex = document.createElement("p");
-            d_inline_flex.className = "d-inline-flex gap-1"
+            d_inline_flex.className = "col-xxl-6 d-inline-flex gap-1"
 
             const link = document.createElement("a");
-            link.className = "btn btn-primary"
+            link.className = "btn btn-primary w-100 right-angle bg-blue-gray"
             link.setAttribute("data-bs-toggle", "collapse")
-            link.setAttribute("href", `#multiCollapse_${item.title.upper}`)
+            link.setAttribute("href", `#multiCollapse_${item.title.toUpperCase().replace(/\s+/g, "")}`)
             link.setAttribute("role", "button")
             link.setAttribute("aria-expanded", "false")
-            link.setAttribute("aria-controls", `#multiCollapse_${item.title.upper}`)
-            link.innerText = `${item.title.upper}`
+            link.setAttribute("aria-controls", `multiCollapse_${item.title.toUpperCase().replace(/\s+/g, "")}`)
+            link.innerText = `${item.title.toUpperCase()}`
 
             const block = document.createElement("div");
             block.className = "row"
@@ -43,24 +48,31 @@ export const AboutMeAndJobSections = {
             col.className = "col"
 
             const collapse = document.createElement("div");
-            collapse.className = "collapse multi-collapse"
-            collapse.id = `#multiCollapse_${item.title.upper}`
+            collapse.className = "collapse multi-collapse mb-4 right-angle"
+            collapse.id = `multiCollapse_${item.title.toUpperCase().replace(/\s+/g, "")}`
+
+            const card = document.createElement("div");
+            card.className = "card card-body"
+
+            const card_title = document.createElement("p");
+            card_title.className = "title-text media-text-center media-mt-2 bg-dark text-light";
+            card_title.style.width = "21.5rem"
+            card_title.style.textIndent = "0.5rem"
+            card_title.innerText = `${item.title}`;
 
             const card_body = document.createElement("div");
-            card_body.className = "card card-body"
             card_body.innerText = `${item.description}`
 
-            container.appendChild(block)
-            block.appendChild(col)
-            col.appendChild(collapse)
-            collapse.appendChild(card_body)
+            block.appendChild(col);
+            col.appendChild(collapse);
+            card.appendChild(card_title)
+            card.appendChild(card_body);
+            collapse.appendChild(card);
+
+            d_inline_flex.appendChild(link);
+
+            about_job_blocks_col.appendChild(d_inline_flex);
+            about_job_blocks.appendChild(block);
         })
-
-        container.innerHTML = renderTemplate(this.template, config);
-
-        if (typeof this.onMount === "function") {
-            this.onMount();
-        }
-    },
-    onMount() {}
+    }
 }
