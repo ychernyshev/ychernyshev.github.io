@@ -5,8 +5,8 @@ export function init(app) {
         app.sceneManager.mountScene("page_404");
     });
 
-    app.routing.add("introducing", () => {
-        app.sceneManager.mountScene("welcome_view");
+    app.routing.add("guide", () => {
+        app.sceneManager.mountScene("guide");
     });
 
     app.routing.add("welcome", () => {

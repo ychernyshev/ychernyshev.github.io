@@ -32,29 +32,15 @@ export const RegistryLayoutScheme = {
                 tagline: "Pure JS. No build. Host-ready.",
                 CTA: {label: "Get Started with Horizon", link: "#guide"},
             },
-            QuickDocs: {
-                links: [
-                    {label: "📘 What is Horizon?", href: "#guide"},
-                    {label: "🚀 Creating Your First Scene", href: "#first-scene"},
-                    {label: "🧩 Component Structure", href: "#components"}
-                ]
-            },
-            CodeBlock: {
-                codeSnippets: {
-                    example_js: {
-                        title: 'example_js',
-                        language: "js",
-                        content: `const msg = "Hello Horizon";`
-                    },
-                    example_html: {
-                        title: 'example_html',
-                        language: "html",
-                        content: `<div id="app"></div>`
-                    }
-                }
-            },
         },
         linkHref: [],
         scriptSrc: [],
+    },
+    worked_view: {
+        primary_structure: ``,
+        layout: [
+            "TopNav",
+        ],
+        config: {}
     }
 }
