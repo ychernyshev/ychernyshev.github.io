@@ -21,6 +21,10 @@ export function init(app) {
         app.sceneManager.mountScene("education_view");
     });
 
+    app.routing.add("contacts", () => {
+        app.sceneManager.mountScene("contacts_view");
+    });
+
     app.routing.init();
     app.localStorage.init();
     // app.dispatcher.init();

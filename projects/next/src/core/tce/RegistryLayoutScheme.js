@@ -67,14 +67,14 @@ export const RegistryLayoutScheme = {
     contacts_view: {
         primary_structure: `
             <main>
-              <section id="education-block"></section>
+              <section id="contacts-block"></section>
             </main>
         `,
         layout: [
             "ContactsView",
             "TopNav",
         ],
-        config: {}, 
+        config: {},
         linkHref: [],
         scriptSrc: [],
     }
