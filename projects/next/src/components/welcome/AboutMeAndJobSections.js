@@ -48,11 +48,11 @@ export const AboutMeAndJobSections = {
             col.className = "col"
 
             const collapse = document.createElement("div");
-            collapse.className = "collapse multi-collapse mb-4 right-angle"
+            collapse.className = "collapse multi-collapse right-angle"
             collapse.id = `multiCollapse_${item.title.toUpperCase().replace(/\s+/g, "")}`
 
             const card = document.createElement("div");
-            card.className = "card card-body"
+            card.className = "card card-body right-angle"
 
             const card_title = document.createElement("p");
             card_title.className = "title-text media-text-center media-mt-2 bg-dark text-light";
