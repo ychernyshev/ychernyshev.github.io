@@ -49,5 +49,19 @@ export const RegistryLayoutScheme = {
         config: {},
         linkHref: [],
         scriptSrc: [],
+    },
+    education_view: {
+        primary_structure: `
+            <main>
+              <section id="education-block"></section>
+            </main>
+        `,
+        layout: [
+            "EducationView",
+            "TopNav",
+        ],
+        config: {},
+        linkHref: [],
+        scriptSrc: [],
     }
 }

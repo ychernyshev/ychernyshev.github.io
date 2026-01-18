@@ -1,6 +1,8 @@
 // Pages
 import { Page_404_View } from "../../pages/reports/Page_404_View.js";
 import { WelcomeScene } from "../../pages/WelcomeScene.js";
+import {WorkedScene} from "../../pages/WorkedScene.js";
+import {EducationScene} from "../../pages/EducationScene.js";
 
 // Components
 import {TopNav} from "../../components/inc/TopNav.js";
@@ -12,7 +14,6 @@ import {InteractiveResume} from "../../components/welcome/InteractiveResume.js";
 import {DownloadCV} from "../../components/welcome/DownloadCV.js";
 import {AdditionalSkills} from "../../components/welcome/AdditionalSkills.js";
 import {MainSkills} from "../../components/welcome/MainSkills.js";
-import {WorkedScene} from "../../pages/WorkedScene.js";
 
 export class LayoutRegistryComponents {
     static
@@ -21,6 +22,7 @@ export class LayoutRegistryComponents {
         Page404: Page_404_View,
         WelcomeView: WelcomeScene,
         WorkedView: WorkedScene,
+        EducationView: EducationScene,
         // componentName
         TopNav,
         IntroSection,
