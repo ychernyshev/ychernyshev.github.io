@@ -63,5 +63,19 @@ export const RegistryLayoutScheme = {
         config: {},
         linkHref: [],
         scriptSrc: [],
+    },
+    contacts_view: {
+        primary_structure: `
+            <main>
+              <section id="education-block"></section>
+            </main>
+        `,
+        layout: [
+            "ContactsView",
+            "TopNav",
+        ],
+        config: {}, 
+        linkHref: [],
+        scriptSrc: [],
     }
 }

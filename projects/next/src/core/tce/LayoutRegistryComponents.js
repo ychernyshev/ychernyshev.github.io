@@ -3,6 +3,7 @@ import { Page_404_View } from "../../pages/reports/Page_404_View.js";
 import { WelcomeScene } from "../../pages/WelcomeScene.js";
 import {WorkedScene} from "../../pages/WorkedScene.js";
 import {EducationScene} from "../../pages/EducationScene.js";
+import {ContactsScene} from "../../pages/ContactsScene.js";
 
 // Components
 import {TopNav} from "../../components/inc/TopNav.js";
@@ -23,6 +24,7 @@ export class LayoutRegistryComponents {
         WelcomeView: WelcomeScene,
         WorkedView: WorkedScene,
         EducationView: EducationScene,
+        ContactsView: ContactsScene,
         // componentName
         TopNav,
         IntroSection,
