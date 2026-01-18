@@ -12,6 +12,7 @@ import {InteractiveResume} from "../../components/welcome/InteractiveResume.js";
 import {DownloadCV} from "../../components/welcome/DownloadCV.js";
 import {AdditionalSkills} from "../../components/welcome/AdditionalSkills.js";
 import {MainSkills} from "../../components/welcome/MainSkills.js";
+import {WorkedScene} from "../../pages/WorkedScene.js";
 
 export class LayoutRegistryComponents {
     static
@@ -19,6 +20,7 @@ export class LayoutRegistryComponents {
         // sceneName
         Page404: Page_404_View,
         WelcomeView: WelcomeScene,
+        WorkedView: WorkedScene,
         // componentName
         TopNav,
         IntroSection,

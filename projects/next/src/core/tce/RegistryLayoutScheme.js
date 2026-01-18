@@ -37,10 +37,17 @@ export const RegistryLayoutScheme = {
         scriptSrc: [],
     },
     worked_view: {
-        primary_structure: ``,
+        primary_structure: `
+            <main>
+              <section id="worked-block"></section>
+            </main>
+        `,
         layout: [
+            "WorkedView",
             "TopNav",
         ],
-        config: {}
+        config: {},
+        linkHref: [],
+        scriptSrc: [],
     }
 }
