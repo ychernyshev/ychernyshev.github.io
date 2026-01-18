@@ -14,7 +14,11 @@ export function init(app) {
     });
 
     app.routing.add("worked", () => {
-        app.sceneManager.mountScene("quick_docs");
+        app.sceneManager.mountScene("worked_view");
+    });
+
+    app.routing.add("education", () => {
+        app.sceneManager.mountScene("education_view");
     });
 
     app.routing.init();
