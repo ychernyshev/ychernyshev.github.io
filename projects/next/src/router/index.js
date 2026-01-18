@@ -13,7 +13,7 @@ export function init(app) {
         app.sceneManager.mountScene("welcome_view");
     });
 
-    app.routing.add("quickdocs", () => {
+    app.routing.add("worked", () => {
         app.sceneManager.mountScene("quick_docs");
     });
 
