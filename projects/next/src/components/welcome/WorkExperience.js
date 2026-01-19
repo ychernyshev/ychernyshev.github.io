@@ -8,9 +8,8 @@ export const WorkExperience = {
         }
 
         container.innerHTML = `
-            <div class="row card card-body right-angle" id="job-index">
-                <div id="job-title-block"></div>
-                <div id="job-description-block"></div>
+            <div class="row justify-content-center">
+                <div class="row" id="job-index"></div>
             </div>
         `;
 
@@ -96,13 +95,46 @@ export const WorkExperience = {
 
         job_list.forEach((item, index) => {
             const job_index = document.getElementById("job-index");
-            const job_title_block = document.getElementById("job-title-block");
-            const job_description_block = document.getElementById("job-description-block");
 
-            const card_body = document.createElement("div");
-            card_body.className = "card card-body right-angle";
+            const job_title_block = document.createElement("div");
+            job_title_block.className = "col-xxl-4 card card-body right-angle text-center";
+
+            const job_title = document.createElement("p");
+            job_title.className = "text-bolder";
+            job_title.innerText = `${item.title}`;
+
+            const job_position = document.createElement("p");
+            job_position.innerText = `${item.position}`;
+
+            if(!item.duration_to) {
+                const current_job = document.createElement("p");
+                current_job.innerText = `Duration from ${item.duration_from}`;
+
+                job_title_block.appendChild(current_job);
+            } else {
+                const job_duration = document.createElement("p");
+                job_duration.innerText = `from ${item.duration_from} to ${item.duration_to}`;
+
+                job_title_block.appendChild(job_duration);
+            }
+
+            const job_description_block = document.createElement("div");
+            job_description_block.className = "col-xxl-8 card card-body right-angle justify bg-dark-custom text-light";
+            job_description_block.innerText = `${item.description}`;
+
+            const responsibilities_ul = document.createElement("ul");
+            const responsibilities_li = document.createElement("li");
+            responsibilities_li.innerText = `${item.responsibilities}`;
 
 
+            job_title_block.appendChild(job_title);
+            job_title_block.appendChild(job_position);
+
+            responsibilities_ul.appendChild(responsibilities_li);
+            job_description_block.appendChild(responsibilities_ul);
+
+            job_index.appendChild(job_title_block);
+            job_index.appendChild(job_description_block);
         })
     }
 }
