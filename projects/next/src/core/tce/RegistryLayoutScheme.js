@@ -24,6 +24,7 @@ export const RegistryLayoutScheme = {
             "AdditionalSkills",
             "MainSkills",
             "AboutMeAndJobSections",
+            "WorkExperience",
         ],
         config: {
             WelcomeView: {

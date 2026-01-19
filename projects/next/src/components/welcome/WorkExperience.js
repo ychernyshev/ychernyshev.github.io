@@ -1,9 +1,9 @@
-export const AboutMeAndJobSections = {
+export const WorkExperience = {
     mount() {
-        const container = document.getElementById("about-job-block");
+        const container = document.getElementById("work-experience");
 
         if (!container) {
-            console.warn("[AboutMeAndJobSections] Container #about-job-block not found - component not mounted.");
+            console.warn("[WorkExperience] Container #work-experience not found - component not mounted.");
             return;
         }
 

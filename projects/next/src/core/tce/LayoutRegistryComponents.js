@@ -16,6 +16,7 @@ import {DownloadCV} from "../../components/welcome/DownloadCV.js";
 import {AdditionalSkills} from "../../components/welcome/AdditionalSkills.js";
 import {MainSkills} from "../../components/welcome/MainSkills.js";
 import {AboutMeAndJobSections} from "../../components/welcome/AboutMeAndJobSections.js";
+import {WorkExperience} from "../../components/welcome/WorkExperience.js";
 
 export class LayoutRegistryComponents {
     static
@@ -35,6 +36,7 @@ export class LayoutRegistryComponents {
         DownloadCV,
         AdditionalSkills,
         MainSkills,
-        AboutMeAndJobSections
+        AboutMeAndJobSections,
+        WorkExperience,
     });
 }
