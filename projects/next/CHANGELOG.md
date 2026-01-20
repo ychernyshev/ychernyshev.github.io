@@ -64,3 +64,73 @@ All notable changes to this project will be documented in this file.
 - Components for the `WelcomeScene` have been separated into their own folder `welcome`
 
 ---
+
+[15.01.2026 0.8.0]
+
+## Components
+
+### ContentMain
+- Centered the container by adding the `container-fluid` CSS class.
+
+### InteractiveResume
+- `DownloadCV` component now has full 100% width.
+- Integrated the `MainSkills` component.
+
+### MainSkills
+- Created `MainSkills.js` and moved the main skills section into it.
+- Registered the `MainSkills` component.
+- Removed `margin-top` and `margin-bottom` from CSS classes.
+
+### DownloadCV
+- Moved `download-cv` component from `InteractiveResume` to `IntroSection` for logical arrangement.
+- Adjusted height to match the `MainSkills` component.
+
+### IntroSection
+- `download-cv` component pushed to the bottom of the section.
+- Author image height set to 100%.
+
+### AboutMeAndJobSections
+- Created `AboutMeAndJobSections.js` to show "About me" and "Job experience" collapsing sections.
+- Completed integration into the main page DOM.
+- Updated styles:
+  - Removed `mb-4` from collapsed section.
+  - Added `right-angle` style.
+  - Added `text-dark` class to buttons.
+
+### WorkExperience
+- Created `WorkExperience.js` component.
+- Registered `WorkExperience`.
+- Started showing component content.
+
+---
+
+## Routing & Scenes
+
+### index.js
+- Added alternate route to home page: `"introducing"` (alias `"welcome"`).
+- Added `"worked"` route.
+- Added `"education"` route.
+- Added `"contacts"` route.
+- Fixed section id to `"contacts-block"`.
+
+### RegistryLayoutScheme.js
+- Added `worked_view` configuration for `WorkedScene`.
+
+### WorkedScene
+- Configured `WorkedScene`.
+- Added `TopNav` menu.
+
+### EducationScene
+- Configured `EducationScene`.
+- Added `TopNav` menu.
+
+### ContactsScene
+- Configured `ContactsScene`.
+- Added `TopNav` menu.
+
+---
+
+## Styles (custom.css)
+- Added `bg-blue-gray` and `right-angle` styles.
+- Added `bg-dark-custom` and `justify` classes.
+
