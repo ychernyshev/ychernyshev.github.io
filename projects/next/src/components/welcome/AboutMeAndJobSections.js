@@ -55,9 +55,7 @@ export const AboutMeAndJobSections = {
             card.className = "card card-body right-angle"
 
             const card_title = document.createElement("p");
-            card_title.className = "title-text media-text-center media-mt-2 bg-dark text-light";
-            card_title.style.width = "21.5rem"
-            card_title.style.textIndent = "0.5rem"
+            card_title.className = "col-xxl-3 title-text media-text-center media-mt-2 bg-warning text-dark bold p-1 text-center";
             card_title.innerText = `${item.title}`;
 
             const card_body = document.createElement("div");
