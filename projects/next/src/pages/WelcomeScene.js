@@ -8,6 +8,8 @@ export const WelcomeScene = {
             class="col-xxl-12 text-light" 
             id="intro-section"></section>
         <section id="content-main"></section>
+        <section id="content-main"></section>
+        <section class="row justify-content-center bg-darker text-light" id="additional-skills"></section>
     `,
     mount(config = {}) {
         const container = document.getElementById("welcome-block");
