@@ -33,7 +33,7 @@ export const AboutMeAndJobSections = {
             d_inline_flex.className = "col-xxl-6 d-inline-flex gap-1"
 
             const link = document.createElement("a");
-            link.className = "btn btn-primary w-100 right-angle bg-blue-gray text-dark"
+            link.className = "btn btn-warning w-100 right-angle bg-blue-gray text-dark"
             link.setAttribute("data-bs-toggle", "collapse")
             link.setAttribute("href", `#multiCollapse_${item.title.toUpperCase().replace(/\s+/g, "")}`)
             link.setAttribute("role", "button")
