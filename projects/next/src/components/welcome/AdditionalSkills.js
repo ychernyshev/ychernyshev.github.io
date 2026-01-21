@@ -8,8 +8,7 @@ export const AdditionalSkills = {
         }
 
         container.innerHTML = `
-            <div class="row justify-content-center">
-                <div class="col-xl-10 col-sm-12 text-light mt-3 p-3">
+            <div class="col-xl-10 col-sm-12 text-light mt-3 p-3">
                     <h5 class="text-center regular-text font-weight-bold text-light">My additional skills</h5>
                     <p class="regular-text" style="font-size: 1.3rem;">
                         These are the primary skills I have acquired while working as a contact center operator. I can't ignore these
@@ -51,7 +50,6 @@ export const AdditionalSkills = {
                         </div>
                     </div>
                 </div>
-            </div>
         `
     }
 }
