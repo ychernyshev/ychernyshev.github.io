@@ -130,9 +130,12 @@ export const WorkExperience = {
             job_description_block.innerText = `${item.description}`;
 
             const responsibilities_ul = document.createElement("ul");
+            responsibilities_ul.className = "list-group list-group-flush";
+            responsibilities_ul.style.listStyleType = "none";
 
             item.responsibilities.forEach(resp => {
                     const li = document.createElement("li");
+                    li.className = "list-group-item bg-transparent";
                     li.innerText = resp;
                     responsibilities_ul.appendChild(li);
                 }
