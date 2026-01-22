@@ -124,8 +124,10 @@ export const WorkExperience = {
 
             const responsibilities_ul = document.createElement("ul");
             const responsibilities_li = document.createElement("li");
-            responsibilities_li.innerText = `${item.responsibilities}`;
 
+            for(let i = 0; i < item.responsibilities.length; i++) {
+                responsibilities_li.innerText = `${item.responsibilities[i]}`;
+            }
 
             job_title_block.appendChild(job_title);
             job_title_block.appendChild(job_position);
