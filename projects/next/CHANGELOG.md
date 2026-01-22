@@ -65,7 +65,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-[15.01.2026 0.8.0]
+[15.01.2026 - 20.01.2026 0.8.0]
 
 ## Components
 
@@ -134,3 +134,22 @@ All notable changes to this project will be documented in this file.
 - Added `bg-blue-gray` and `right-angle` styles.
 - Added `bg-dark-custom` and `justify` classes.
 
+---
+
+[21.01.2026 0.9.0]
+
+## Components
+
+### AboutMeAndJobSections
+- Changed button hover class from `btn-primary` to `btn-warning`.
+- Updated card title styles:
+  - Changed color
+  - Adjusted sizes
+  - Modified paddings
+  - Updated text position
+
+### AdditionalSkills
+- Removed redundant `div` with Bootstrap class `row`.
+- Component changes:
+  - Moved `AdditionalSkill` from `ContentMain.js` to `WelcomeScene.js`.
+  - Converted `AdditionalSkill` into a `section`.
